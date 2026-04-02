@@ -1143,6 +1143,34 @@
             box-shadow: 0 0 0 3px rgba(201, 162, 39, 0.25);
         }
 
+    
+        /* Language Flag Display */
+        .nav-language {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            position: relative;
+        }
+        
+        .lang-flag {
+            font-size: 1.4rem;
+            margin-right: 0.3rem;
+            filter: drop-shadow(0 1px 2px rgba(0,0,0,0.1));
+        }
+        
+        .nav-language {
+            padding-left: 0.5rem;
+        }
+        
+        .nav-language::before {
+            display: none; /* On remplace l'icône par le drapeau */
+        }
+        
+        .nav-language select {
+            padding: 0.6rem 2.5rem 0.6rem 0.8rem;
+            min-width: 130px;
+        }
+
     </style>
 </head>
 <body>
@@ -1172,8 +1200,9 @@
                 </div>
             </li>
         </ul>
-        <div class="nav-language">
-            <select id="language-select" aria-label="Sélectionner la langue" onchange="window.location.href=this.value">
+        
+            <span class="lang-flag">🇫🇷</span>
+             aria-label="Sélectionner la langue" onchange="window.location.href=this.value">
                 <option value="./index.html" selected>Français</option>
                 <option value="./en/index.html">English</option>
                 <option value="./nl/index.html">Nederlands</option>
