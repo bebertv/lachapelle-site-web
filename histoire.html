@@ -1093,10 +1093,19 @@
         display: block;
     }
 }
+/* Detail pages */
+.detail-hero { min-height: 40vh; background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%); display: flex; align-items: center; justify-content: center; text-align: center; color: white; padding: 6rem 2rem 3rem; }
+.detail-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.5rem); }
+.breadcrumb { background: var(--color-bg-alt); padding: 1rem 2rem; font-size: 0.9rem; }
+.breadcrumb a { color: var(--color-primary); text-decoration: none; }
+.detail-content { max-width: 900px; margin: 0 auto; padding: 3rem 2rem; }
+.detail-content h2 { font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: var(--color-primary-dark); margin: 2.5rem 0 1rem; }
+.detail-content h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--color-primary); margin: 2rem 0 0.75rem; }
+.detail-content p { margin-bottom: 1rem; line-height: 1.8; color: var(--color-text-light); }
 </style>
 </head>
 <body>
-    <nav>
+<nav>
         <a href="index.html" class="nav-logo">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
@@ -1106,7 +1115,7 @@
         <ul class="nav-links">
             <li><a href="index.html">Accueil</a></li>
             <li>
-                <a href="histoire.html">L'Église ▼</a>
+                <a href="#">L'Église ▼</a>
                 <div class="dropdown">
                     <a href="histoire.html">🏛️ Histoire</a>
                     <a href="decor.html">✨ Le Décor Baroque</a>
@@ -1114,7 +1123,7 @@
                 </div>
             </li>
             <li>
-                <a href="visite.html">Visiter ▼</a>
+                <a href="#">Visiter ▼</a>
                 <div class="dropdown">
                     <a href="visite.html">🎫 Planifier ma visite</a>
                     <a href="visite.html#horaires">🕐 Horaires</a>
@@ -1137,80 +1146,75 @@
             <span></span>
         </div>
     </nav>
-
-
-<section class="hero">
-        <div class="hero-bg"></div>
-        <div class="hero-content">
-            <div class="hero-badge">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-                </svg>
-                Monument Historique
-            </div>
-            <h1>Église Saint-Pierre<br>de <em>Lachapelle</em></h1>
-            <p class="hero-subtitle">Un joyau baroque du XVIIIe siècle au cœur de la Lomagne, la "Toscane française". Une découverte exceptionnelle qui surprend et subjugue.</p>
-            <div class="hero-cta">
-                <a href="#horaires" class="btn btn-primary">Visiter</a>
-                <a href="#histoire" class="btn btn-secondary">Découvrir</a>
-            </div>
-        </div>
-        <div class="hero-scroll">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 5v14M5 12l7 7 7-7"/>
-            </svg>
-        </div>
-    </section>
-
-    <section class="summary-section" id="decouvrir">
+<section class="detail-hero"><div><h1>Une Histoire Millénaire</h1></div></section>
+<div class="breadcrumb"><div style="max-width:1200px;margin:0 auto"><a href="index.html">← Retour à l'accueil</a></div></div>
+<div class="detail-content">
         <div class="container">
             <div class="section-header animate">
-                <span class="section-tag">Découvrir</span>
-                <h2 class="section-title">Un Patrimoine Exceptionnel</h2>
-                <p class="section-subtitle">Explorez l'histoire et les trésors de cette église baroque unique</p>
+                <span class="section-tag">Patrimoine</span>
+                <h2 class="section-title">Une Histoire Millénaire</h2>
+                <p class="section-subtitle">Du château fort aux splendeurs baroques, cinq siècles d'histoire religieuse en Lomagne</p>
             </div>
-            
-            <div class="summary-grid">
-                <div class="summary-card animate">
-                    <div class="summary-card-image" style="background-image: url('images/Lachapelle.jpg')"></div>
-                    <div class="summary-card-content">
-                        <h3>🏛️ Une Histoire Millénaire</h3>
-                        <p>Du village de Saint-Hilaire aux guerres de religion, cinq siècles d'histoire en Lomagne. Découvrez le château, la commanderie templière et les événements qui ont façonné Lachapelle.</p>
-                        <a href="histoire.html" class="btn btn-secondary">En savoir plus →</a>
-                    </div>
+
+            <div class="histoire-grid">
+                <div class="histoire-image animate">
+                    <img src="images/Lachapelle_-_Église_Saint-Pierre_-2.JPG" alt="Église Saint-Pierre de Lachapelle">
                 </div>
-                
-                <div class="summary-card animate">
-                    <div class="summary-card-image" style="background-image: url('images/Église_de_Lachapelle_2021_05_-_Chaire.jpg')"></div>
-                    <div class="summary-card-content">
-                        <h3>✨ Le Décor Baroque</h3>
-                        <p>Les frères Goulard et l'artiste Maraignon ont créé un intérieur exceptionnel avec tribunes à courbes et contre-courbes, véritable joyau de l'art baroque méridional.</p>
-                        <a href="decor.html" class="btn btn-secondary">En savoir plus →</a>
-                    </div>
-                </div>
-                
-                <div class="summary-card animate">
-                    <div class="summary-card-image" style="background-image: url('images/Église_de_Lachapelle_2021_09_-_Vitrail.jpg')"></div>
-                    <div class="summary-card-content">
-                        <h3>🎫 Visiter l'Église</h3>
-                        <p>Ouvert toute l'année sur rendez-vous. Découvrez les horaires, planifiez votre visite guidée et accédez à cet édifice classé Monument Historique depuis 1975.</p>
-                        <a href="visite.html" class="btn btn-primary">Planifier ma visite</a>
-                    </div>
-                </div>
-                
-                <div class="summary-card animate">
-                    <div class="summary-card-image" style="background-image: url('images/Lachapelle_2021_01_-_Chateau.jpg')"></div>
-                    <div class="summary-card-content">
-                        <h3>📜 La Querelle Religieuse</h3>
-                        <p>L'affaire Bruitte en 1840 et l'émergence d'une communauté protestante, un chapitre tumultueux de l'histoire religieuse de Lachapelle.</p>
-                        <a href="querelle.html" class="btn btn-secondary">En savoir plus →</a>
+                <div class="histoire-content animate">
+                    <h3>Les Origines du Village</h3>
+                    <p>Le village initial de Lachapelle se trouvait au lieu-dit <strong>Saint-Hilaire</strong> (Sant-Alari en occitan), avec une église paroissiale dédiée à saint Hilaire. Ce village a été en grande partie détruit pendant la <strong>guerre de Cent Ans</strong>, et les guerres de religion ont achevé sa destruction au XVIe siècle.</p>
+                    <p>Les habitations se sont alors déplacées autour du château au XVe siècle, et le village a pris le nom de la chapelle qui était autrefois celle du château — construite au XIe siècle.</p>
+
+                    <h3>Le Château</h3>
+                    <p>Un château est construit sur le rocher au XIIe siècle. Il aurait dépendu de la <strong>commanderie templière de Nomdieu</strong>, près de Nérac, fondée vers 1154. Le château conserva son donjon d'origine, dont la hauteur fut réduite de moitié au XIXe siècle.</p>
+                    <p>Le château appartint à de nombreuses familles : les vicomtes de Lomagne (Maison d'Armagnac), puis les Lanusse (1486), les Gout, les Fourquevaux (1627), les Grossoles jusqu'en 1730. En 1772, Lachapelle appartenait à trois coseigneurs : <em>Fourquevaux, Belloc de Labrousse et Thomas Laclaverie</em>.</p>
+
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-date">XIe-XIIe s.</div>
+                            <div class="timeline-text">Construction du château et de la chapelle castrale sur le rocher</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">Vers 1154</div>
+                            <div class="timeline-text">Dépendance de la commanderie templière de Nomdieu</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">XVe siècle</div>
+                            <div class="timeline-text">Le village se déplace autour du château — l'chapelle devient église paroissiale</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">1491</div>
+                            <div class="timeline-text">Le château appartient aux Grossoles jusqu'en 1730</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">1772</div>
+                            <div class="timeline-text">Trois coseigneurs : Fourquevaux, Belloc et Laclaverie</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">1776</div>
+                            <div class="timeline-text">Achèvement du décor baroque intérieur par Maraignon, dit Champaigne</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">Révolution</div>
+                            <div class="timeline-text">Le château et l'église vendus comme bien national</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">1801</div>
+                            <div class="timeline-text">Rendue au culte après le Concordat</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">7 avril 1975</div>
+                            <div class="timeline-text">Classement au titre des Monuments Historiques</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">1991</div>
+                            <div class="timeline-text">Restauration et restitution du plafond d'origine</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-
-
+    </div>
 <footer>
         <div class="footer-logo">Église Saint-Pierre de Lachapelle</div>
         <div class="footer-links">
@@ -1222,23 +1226,5 @@
             Association des Amis de l'Église de Lachapelle — 82120 Lachapelle
         </p>
     </footer>
-
-    <script>
-        // Navigation scroll effect
-        window.addEventListener('scroll', () => {
-            document.querySelector('nav').classList.toggle('scrolled', window.scrollY > 100);
-        });
-        
-        // Animation on scroll
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1 });
-        
-        document.querySelectorAll('.animate').forEach(el => observer.observe(el));
-    </script>
-</body>
-</html>
+<script>window.addEventListener('scroll',()=>{document.querySelector('nav').classList.toggle('scrolled',window.scrollY>100)})</script>
+</body></html>
