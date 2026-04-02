@@ -973,6 +973,15 @@
             <li><a href="#horaires">Horaires</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+        <div class="nav-language">
+            <select id="language-select" aria-label="Sélectionner la langue">
+                <option value="fr">Français</option>
+                <option value="en">English</option>
+                <option value="nl">Nederlands</option>
+                <option value="de">Deutsch</option>
+                <option value="zh">中文</option>
+            </select>
+        </div>
         <div class="nav-toggle">
             <span></span>
             <span></span>
@@ -1525,6 +1534,17 @@
 
         document.querySelectorAll('.animate').forEach(el => observer.observe(el));
 
+        // Language selector
+        const languageSelect = document.getElementById('language-select');
+        if (languageSelect) {
+            languageSelect.addEventListener('change', function() {
+                const lang = this.value;
+                // Ici, on pourrait rediriger vers des versions traduites
+                // Pour l'instant, on affiche une alerte (à remplacer par vraie logique i18n)
+                alert('Langue sélectionnée : ' + lang + '\nFonctionnalité de traduction à venir');
+            });
+        }
+
         // Carousel
         const track = document.querySelector('.carousel-track');
         const slides = document.querySelectorAll('.carousel-slide');
@@ -1604,3 +1624,39 @@
     </script>
 </body>
 </html>
+
+/* Language selector */
+.nav-language {
+    margin-left: auto;
+    margin-right: 1rem;
+}
+
+.nav-language select {
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-text-light);
+    border-radius: var(--radius-sm);
+    color: var(--color-text);
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.nav-language select:hover,
+.nav-language select:focus {
+    border-color: var(--color-accent);
+    outline: none;
+}
+
+@media (max-width: 768px) {
+    .nav-language {
+        margin: 1rem 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .nav-language select {
+        width: 80%;
+        max-width: 200px;
+    }
+}
