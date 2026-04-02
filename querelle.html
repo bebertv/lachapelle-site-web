@@ -1094,7 +1094,10 @@
     }
 }
 /* Detail pages */
-.detail-hero { min-height: 50vh; background-image: linear-gradient(rgba(139, 90, 43, 0.75), rgba(160, 120, 60, 0.85)), url('images/diocese-montauban-1885.jpg'); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; text-align: center; color: white; padding: 6rem 2rem 3rem; }
+.detail-hero { min-height: 50vh; position: relative; display: flex; align-items: center; justify-content: center; text-align: center; color: white; padding: 6rem 2rem 3rem; overflow: hidden; }
+.detail-hero::before { content: ''; position: absolute; inset: 0; background-image: url('images/diocese-montauban-1885.jpg'); background-size: cover; background-position: center; opacity: 0.15; z-index: 0; }
+.detail-hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-bg-alt) 100%); opacity: 0.95; z-index: 0; }
+.detail-hero > div { position: relative; z-index: 1; }
 .detail-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.5rem); }
 .breadcrumb { background: var(--color-bg-alt); padding: 1rem 2rem; font-size: 0.9rem; }
 .breadcrumb a { color: var(--color-primary); text-decoration: none; }
