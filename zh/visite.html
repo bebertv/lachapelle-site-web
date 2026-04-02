@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Église Saint-Pierre de Lachapelle — De l'Art Baroque à la campagne</title>
+    <title>圣彼得教堂 de Lachapelle — De l'Art Baroque à la campagne</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -283,7 +283,7 @@
             margin: 0 auto;
         }
 
-        /* Histoire */
+        /* 历史 */
         #histoire {
             background: var(--color-white);
         }
@@ -1093,110 +1093,41 @@
         display: block;
     }
 }
-
-        /* Language Selector Styling */
-        .nav-language {
-            position: relative;
-        }
-        
-        .nav-language::before {
-            content: '🌐';
-            position: absolute;
-            left: 12px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 0.9rem;
-            z-index: 2;
-            pointer-events: none;
-        }
-        
-        .nav-language select {
-            padding: 0.6rem 2.5rem 0.6rem 2.2rem;
-            border: 2px solid var(--color-accent);
-            border-radius: var(--radius-md);
-            background: linear-gradient(135deg, #faf8f5 0%, #f0ebe0 100%);
-            color: var(--color-primary-dark);
-            font-family: 'Outfit', sans-serif;
-            font-size: 0.85rem;
-            font-weight: 500;
-            cursor: pointer;
-            appearance: none;
-            -webkit-appearance: none;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%238b6914' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: calc(100% - 12px) center;
-            background-size: 0.8rem;
-            box-shadow: 0 2px 8px rgba(139, 105, 20, 0.1);
-            transition: all 0.3s ease;
-            min-width: 140px;
-        }
-        
-        .nav-language select:hover {
-            border-color: var(--color-primary);
-            box-shadow: 0 4px 12px rgba(201, 162, 39, 0.2);
-            transform: translateY(-2px);
-        }
-        
-        .nav-language select:focus {
-            outline: none;
-            border-color: var(--color-primary);
-            box-shadow: 0 0 0 3px rgba(201, 162, 39, 0.25);
-        }
-
-    
-        /* Language Flag Display */
-        .nav-language {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            position: relative;
-        }
-        
-        .lang-flag {
-            font-size: 1.4rem;
-            margin-right: 0.3rem;
-            filter: drop-shadow(0 1px 2px rgba(0,0,0,0.1));
-        }
-        
-        .nav-language {
-            padding-left: 0.5rem;
-        }
-        
-        .nav-language::before {
-            display: none; /* On remplace l'icône par le drapeau */
-        }
-        
-        .nav-language select {
-            padding: 0.6rem 2.5rem 0.6rem 0.8rem;
-            min-width: 130px;
-        }
-
-    </style>
+/* Detail pages */
+.detail-hero { min-height: 40vh; background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%); display: flex; align-items: center; justify-content: center; text-align: center; color: white; padding: 6rem 2rem 3rem; }
+.detail-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.5rem); }
+.breadcrumb { background: var(--color-bg-alt); padding: 1rem 2rem; font-size: 0.9rem; }
+.breadcrumb a { color: var(--color-primary); text-decoration: none; }
+.detail-content { max-width: 900px; margin: 0 auto; padding: 3rem 2rem; }
+.detail-content h2 { font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: var(--color-primary-dark); margin: 2.5rem 0 1rem; }
+.detail-content h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--color-primary); margin: 2rem 0 0.75rem; }
+.detail-content p { margin-bottom: 1rem; line-height: 1.8; color: var(--color-text-light); }
+</style>
 </head>
 <body>
-    <nav>
+<nav>
         <a href="index.html" class="nav-logo">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
             </svg>
-            Église Saint-Pierre
+            圣彼得教堂
         </a>
         <ul class="nav-links">
-            <li><a href="index.html">Accueil</a></li>
+            <li><a href="index.html">首页</a></li>
             <li>
-                <a href="histoire.html">L'Église ▼</a>
+                <a href="#">L'Église ▼</a>
                 <div class="dropdown">
-                    <a href="histoire.html">🏛️ Histoire</a>
-                    <a href="decor.html">✨ Die Barocke Innenausstattung</a>
-                    <a href="querelle.html">📜 Der Religiöse Streit</a>
+                    <a href="histoire.html">🏛️ 历史</a>
+                    <a href="decor.html">✨ Le Décor Baroque</a>
+                    <a href="querelle.html">📜 La Querelle Religieuse</a>
                 </div>
             </li>
             <li>
-                <a href="visite.html">Visiter ▼</a>
+                <a href="#">参观 ▼</a>
                 <div class="dropdown">
                     <a href="visite.html">🎫 Planifier ma visite</a>
                     <a href="visite.html#horaires">🕐 Horaires</a>
-                    <a href="visite.html#contact">📞 Contact</a>
+                    <a href="visite.html#contact">📞 联系</a>
                 </div>
             </li>
         </ul>
@@ -1214,82 +1145,90 @@
             <span></span>
         </div>
     </nav>
-
-
-<section class="hero">
-        <div class="hero-bg"></div>
-        <div class="hero-content">
-            <div class="hero-badge">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-                </svg>
-                Monument Historique
-            </div>
-            <h1>Église Saint-Pierre<br>de <em>Lachapelle</em></h1>
-            <p class="hero-subtitle">Un joyau baroque du XVIIIe siècle au cœur de la Lomagne, la "Toscane française". Une découverte exceptionnelle qui surprend et subjugue.</p>
-            <div class="hero-cta">
-                <a href="visite.html" class="btn btn-primary">Visiter</a>
-                <a href="#decouvrir" class="btn btn-secondary">Découvrir</a>
-            </div>
-        </div>
-        <div class="hero-scroll">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 5v14M5 12l7 7 7-7"/>
-            </svg>
-        </div>
-    </section>
-
-    <section class="summary-section" id="decouvrir">
+<section class="detail-hero"><div><h1>参观 l'Église</h1></div></section>
+<div class="breadcrumb"><div style="max-width:1200px;margin:0 auto"><a href="index.html">← ← 返回首页</a></div></div>
+<div class="detail-content">
         <div class="container">
-            <div class="section-header animate">
-                <span class="section-tag">Découvrir</span>
-                <h2 class="section-title">Un Patrimoine Exceptionnel</h2>
-                <p class="section-subtitle">Explorez l'histoire et les trésors de cette église baroque unique</p>
+            <div class="section-header">
+                <span class="section-tag">Pratique</span>
+                <h2 class="section-title">Horaires & Accès</h2>
+                <p class="section-subtitle">Venez découvrir ce trésor caché de la Lomagne</p>
             </div>
-            
-            <div class="summary-grid">
-                <div class="summary-card animate">
-                    <div class="summary-card-image" style="background-image: url('images/Lachapelle.jpg')"></div>
-                    <div class="summary-card-content">
-                        <h3>🏛️ Eine Jahrtausende alte Geschichte</h3>
-                        <p>Du village de Saint-Hilaire aux guerres de religion, cinq siècles d'histoire en Lomagne. Découvrez le château, la commanderie templière et les événements qui ont façonné Lachapelle.</p>
-                        <a href="histoire.html" class="btn btn-secondary">En savoir plus →</a>
+
+            <div class="horaires-grid">
+                <div class="horaire-card">
+                    <div class="horaire-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 6v6l4 2"/>
+                        </svg>
                     </div>
+                    <h3>Hiver 2025-2026</h3>
+                    <p>Novembre à Mars</p>
+                    <div class="hours">Dimanches 14h - 17h</div>
+                    <p>Visites individuelles</p>
                 </div>
-                
-                <div class="summary-card animate">
-                    <div class="summary-card-image" style="background-image: url('images/Église_de_Lachapelle_2021_05_-_Chaire.jpg')"></div>
-                    <div class="summary-card-content">
-                        <h3>✨ Die Barocke Innenausstattung</h3>
-                        <p>Les frères Goulard et l'artiste Maraignon ont créé un intérieur exceptionnel avec tribunes à courbes et contre-courbes, véritable joyau de l'art baroque méridional.</p>
-                        <a href="decor.html" class="btn btn-secondary">En savoir plus →</a>
+
+                <div class="horaire-card">
+                    <div class="horaire-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2"/>
+                            <path d="M16 2v4M8 2v4M3 10h18"/>
+                        </svg>
                     </div>
+                    <h3>Groupes</h3>
+                    <p>Plus de 10 personnes</p>
+                    <div class="hours">Sur rendez-vous</div>
+                    <p>Nous recevoir en semaine</p>
                 </div>
-                
-                <div class="summary-card animate">
-                    <div class="summary-card-image" style="background-image: url('images/Église_de_Lachapelle_2021_09_-_Vitrail.jpg')"></div>
-                    <div class="summary-card-content">
-                        <h3>🎫 Besuchen Sie die Kirche</h3>
-                        <p>Ouvert toute l'année sur rendez-vous. Découvrez les horaires, planifiez votre visite guidée et accédez à cet édifice classé Monument Historique depuis 1975.</p>
-                        <a href="visite.html" class="btn btn-primary">Planifier ma visite</a>
+
+                <div class="horaire-card">
+                    <div class="horaire-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        </svg>
                     </div>
-                </div>
-                
-                <div class="summary-card animate">
-                    <div class="summary-card-image" style="background-image: url('images/pretre-querelle-1840.png')"></div>
-                    <div class="summary-card-content">
-                        <h3>📜 Der Religiöse Streit</h3>
-                        <p>L'affaire Bruitte en 1840 et l'émergence d'une communauté protestante, un chapitre tumultueux de l'histoire religieuse de Lachapelle.</p>
-                        <a href="querelle.html" class="btn btn-secondary">En savoir plus →</a>
-                    </div>
+                    <h3>Ronde des Crèches</h3>
+                    <p>6 décembre - 11 janvier</p>
+                    <div class="hours">10h - 12h30 / 14h - 17h</div>
+                    <p>Exposition de crèches</p>
                 </div>
             </div>
         </div>
-    </section>
+    
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">联系</span>
+                <h2 class="section-title">Venez Nous Rendre Visite</h2>
+                <p class="section-subtitle">L'équipe de l'association vous accueille toute l'année</p>
+            </div>
 
-
+            <div class="contact-info">
+                <div class="contact-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                        <circle cx="12" cy="10" r="3"/>
+                    </svg>
+                    <span>82120 Lachapelle, Tarn-et-Garonne</span>
+                </div>
+                <div class="contact-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+                    </svg>
+                    <a href="tel:+33612492330">06 12 49 23 30</a>
+                </div>
+                <div class="contact-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                        <path d="M22 6l-10 7L2 6"/>
+                    </svg>
+                    <a href="mailto:contact@lachapelle82.fr">contact@lachapelle82.fr</a>
+                </div>
+            </div>
+        </div>
+    </div>
 <footer>
-        <div class="footer-logo">Église Saint-Pierre de Lachapelle</div>
+        <div class="footer-logo">圣彼得教堂 de Lachapelle</div>
         <div class="footer-links">
             <a href="https://www.lachapelle82.fr" target="_blank" rel="noopener">lachapelle82.fr</a>
             <a href="https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Pierre_de_Lachapelle" target="_blank" rel="noopener">Wikipédia</a>
@@ -1299,23 +1238,5 @@
             Association des Amis de l'Église de Lachapelle — 82120 Lachapelle
         </p>
     </footer>
-
-    <script>
-        // Navigation scroll effect
-        window.addEventListener('scroll', () => {
-            document.querySelector('nav').classList.toggle('scrolled', window.scrollY > 100);
-        });
-        
-        // Animation on scroll
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1 });
-        
-        document.querySelectorAll('.animate').forEach(el => observer.observe(el));
-    </script>
-</body>
-</html>
+<script>window.addEventListener('scroll',()=>{document.querySelector('nav').classList.toggle('scrolled',window.scrollY>100)})</script>
+</body></html>

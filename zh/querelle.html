@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Église Saint-Pierre de Lachapelle — De l'Art Baroque à la campagne</title>
+    <title>圣彼得教堂 de Lachapelle — De l'Art Baroque à la campagne</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -283,7 +283,7 @@
             margin: 0 auto;
         }
 
-        /* Histoire */
+        /* 历史 */
         #histoire {
             background: var(--color-white);
         }
@@ -1093,110 +1093,41 @@
         display: block;
     }
 }
-
-        /* Language Selector Styling */
-        .nav-language {
-            position: relative;
-        }
-        
-        .nav-language::before {
-            content: '🌐';
-            position: absolute;
-            left: 12px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 0.9rem;
-            z-index: 2;
-            pointer-events: none;
-        }
-        
-        .nav-language select {
-            padding: 0.6rem 2.5rem 0.6rem 2.2rem;
-            border: 2px solid var(--color-accent);
-            border-radius: var(--radius-md);
-            background: linear-gradient(135deg, #faf8f5 0%, #f0ebe0 100%);
-            color: var(--color-primary-dark);
-            font-family: 'Outfit', sans-serif;
-            font-size: 0.85rem;
-            font-weight: 500;
-            cursor: pointer;
-            appearance: none;
-            -webkit-appearance: none;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%238b6914' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: calc(100% - 12px) center;
-            background-size: 0.8rem;
-            box-shadow: 0 2px 8px rgba(139, 105, 20, 0.1);
-            transition: all 0.3s ease;
-            min-width: 140px;
-        }
-        
-        .nav-language select:hover {
-            border-color: var(--color-primary);
-            box-shadow: 0 4px 12px rgba(201, 162, 39, 0.2);
-            transform: translateY(-2px);
-        }
-        
-        .nav-language select:focus {
-            outline: none;
-            border-color: var(--color-primary);
-            box-shadow: 0 0 0 3px rgba(201, 162, 39, 0.25);
-        }
-
-    
-        /* Language Flag Display */
-        .nav-language {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            position: relative;
-        }
-        
-        .lang-flag {
-            font-size: 1.4rem;
-            margin-right: 0.3rem;
-            filter: drop-shadow(0 1px 2px rgba(0,0,0,0.1));
-        }
-        
-        .nav-language {
-            padding-left: 0.5rem;
-        }
-        
-        .nav-language::before {
-            display: none; /* On remplace l'icône par le drapeau */
-        }
-        
-        .nav-language select {
-            padding: 0.6rem 2.5rem 0.6rem 0.8rem;
-            min-width: 130px;
-        }
-
-    </style>
+/* Detail pages */
+.detail-hero { min-height: 50vh; background-image: linear-gradient(rgba(60, 40, 30, 0.7), rgba(60, 40, 30, 0.8)), url('images/pretre-querelle-1840.png'); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; text-align: center; color: white; padding: 6rem 2rem 3rem; }
+.detail-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.5rem); }
+.breadcrumb { background: var(--color-bg-alt); padding: 1rem 2rem; font-size: 0.9rem; }
+.breadcrumb a { color: var(--color-primary); text-decoration: none; }
+.detail-content { max-width: 900px; margin: 0 auto; padding: 3rem 2rem; }
+.detail-content h2 { font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: var(--color-primary-dark); margin: 2.5rem 0 1rem; }
+.detail-content h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--color-primary); margin: 2rem 0 0.75rem; }
+.detail-content p { margin-bottom: 1rem; line-height: 1.8; color: var(--color-text-light); }
+</style>
 </head>
 <body>
-    <nav>
+<nav>
         <a href="index.html" class="nav-logo">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
             </svg>
-            Église Saint-Pierre
+            圣彼得教堂
         </a>
         <ul class="nav-links">
-            <li><a href="index.html">Accueil</a></li>
+            <li><a href="index.html">首页</a></li>
             <li>
-                <a href="histoire.html">L'Église ▼</a>
+                <a href="#">L'Église ▼</a>
                 <div class="dropdown">
-                    <a href="histoire.html">🏛️ Histoire</a>
-                    <a href="decor.html">✨ Die Barocke Innenausstattung</a>
-                    <a href="querelle.html">📜 Der Religiöse Streit</a>
+                    <a href="histoire.html">🏛️ 历史</a>
+                    <a href="decor.html">✨ Le Décor Baroque</a>
+                    <a href="querelle.html">📜 La Querelle Religieuse</a>
                 </div>
             </li>
             <li>
-                <a href="visite.html">Visiter ▼</a>
+                <a href="#">参观 ▼</a>
                 <div class="dropdown">
                     <a href="visite.html">🎫 Planifier ma visite</a>
                     <a href="visite.html#horaires">🕐 Horaires</a>
-                    <a href="visite.html#contact">📞 Contact</a>
+                    <a href="visite.html#contact">📞 联系</a>
                 </div>
             </li>
         </ul>
@@ -1214,82 +1145,111 @@
             <span></span>
         </div>
     </nav>
-
-
-<section class="hero">
-        <div class="hero-bg"></div>
-        <div class="hero-content">
-            <div class="hero-badge">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-                </svg>
-                Monument Historique
-            </div>
-            <h1>Église Saint-Pierre<br>de <em>Lachapelle</em></h1>
-            <p class="hero-subtitle">Un joyau baroque du XVIIIe siècle au cœur de la Lomagne, la "Toscane française". Une découverte exceptionnelle qui surprend et subjugue.</p>
-            <div class="hero-cta">
-                <a href="visite.html" class="btn btn-primary">Visiter</a>
-                <a href="#decouvrir" class="btn btn-secondary">Découvrir</a>
-            </div>
-        </div>
-        <div class="hero-scroll">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 5v14M5 12l7 7 7-7"/>
-            </svg>
-        </div>
-    </section>
-
-    <section class="summary-section" id="decouvrir">
+<section class="detail-hero"><div><h1>La Querelle Religieuse</h1></div></section>
+<div class="breadcrumb"><div style="max-width:1200px;margin:0 auto"><a href="index.html">← ← 返回首页</a></div></div>
+<div class="detail-content">
         <div class="container">
-            <div class="section-header animate">
-                <span class="section-tag">Découvrir</span>
-                <h2 class="section-title">Un Patrimoine Exceptionnel</h2>
-                <p class="section-subtitle">Explorez l'histoire et les trésors de cette église baroque unique</p>
+            <div class="section-header">
+                <span class="section-tag">历史</span>
+                <h2 class="section-title">La Querelle Religieuse du XIXe siècle</h2>
+                <p class="section-subtitle">Quand un curé de Lachapelle "prêcha les vérités de l'Evangile, et non les erreurs de Rome"</p>
             </div>
-            
-            <div class="summary-grid">
-                <div class="summary-card animate">
-                    <div class="summary-card-image" style="background-image: url('images/Lachapelle.jpg')"></div>
-                    <div class="summary-card-content">
-                        <h3>🏛️ Eine Jahrtausende alte Geschichte</h3>
-                        <p>Du village de Saint-Hilaire aux guerres de religion, cinq siècles d'histoire en Lomagne. Découvrez le château, la commanderie templière et les événements qui ont façonné Lachapelle.</p>
-                        <a href="histoire.html" class="btn btn-secondary">En savoir plus →</a>
+
+            <div class="content-layout" style="display:flex;gap:3rem;max-width:1200px;margin:0 auto;align-items:flex-start;">
+                <aside class="timeline-sidebar" style="flex:0 0 280px;position:sticky;top:120px;align-self:flex-start;">
+                    <h4 style="color:var(--color-primary-dark);margin-bottom:1rem;font-family:'Cormorant Garamond',serif;font-size:1.2rem;text-align:center;">Chronologie</h4>
+                    <div class="timeline-compact">
+                        <div class="timeline-compact-item" style="border-left:3px solid var(--color-accent);padding-left:1rem;margin-bottom:0.8rem;position:relative;">
+                            <span style="font-weight:600;color:var(--color-primary);font-size:0.9rem;">1840</span>
+                            <p style="font-size:0.85rem;margin:0.2rem 0;">Bruitte nommé curé</p>
+                        </div>
+                        <div class="timeline-compact-item" style="border-left:3px solid var(--color-accent);padding-left:1rem;margin-bottom:0.8rem;position:relative;">
+                            <span style="font-weight:600;color:var(--color-primary);font-size:0.9rem;">1842</span>
+                            <p style="font-size:0.85rem;margin:0.2rem 0;">Conflit avec l'évêché</p>
+                        </div>
+                        <div class="timeline-compact-item" style="border-left:3px solid var(--color-accent);padding-left:1rem;margin-bottom:0.8rem;position:relative;">
+                            <span style="font-weight:600;color:var(--color-primary);font-size:0.9rem;">1843</span>
+                            <p style="font-size:0.85rem;margin:0.2rem 0;">"Adieux à Rome" — Abjuration</p>
+                        </div>
+                        <div class="timeline-compact-item" style="border-left:3px solid var(--color-accent);padding-left:1rem;margin-bottom:0.8rem;position:relative;">
+                            <span style="font-weight:600;color:var(--color-primary);font-size:0.9rem;">1847</span>
+                            <p style="font-size:0.85rem;margin:0.2rem 0;">Pétition protestante</p>
+                        </div>
+                        <div class="timeline-compact-item" style="border-left:3px solid var(--color-accent);padding-left:1rem;margin-bottom:0.8rem;position:relative;">
+                            <span style="font-weight:600;color:var(--color-primary);font-size:0.9rem;">1847</span>
+                            <p style="font-size:0.85rem;margin:0.2rem 0;">Ouverture de l'oratoire</p>
+                        </div>
+                        <div class="timeline-compact-item" style="border-left:3px solid var(--color-accent);padding-left:1rem;margin-bottom:0.8rem;position:relative;">
+                            <span style="font-weight:600;color:var(--color-primary);font-size:0.9rem;">1850-51</span>
+                            <p style="font-size:0.85rem;margin:0.2rem 0;">Temple construit</p>
+                        </div>
+                        <div class="timeline-compact-item" style="border-left:3px solid var(--color-accent);padding-left:1rem;margin-bottom:0.8rem;position:relative;">
+                            <span style="font-weight:600;color:var(--color-primary);font-size:0.9rem;">1885</span>
+                            <p style="font-size:0.85rem;margin:0.2rem 0;">Fermeture du culte</p>
+                        </div>
                     </div>
-                </div>
+                </aside>
                 
-                <div class="summary-card animate">
-                    <div class="summary-card-image" style="background-image: url('images/Église_de_Lachapelle_2021_05_-_Chaire.jpg')"></div>
-                    <div class="summary-card-content">
-                        <h3>✨ Die Barocke Innenausstattung</h3>
-                        <p>Les frères Goulard et l'artiste Maraignon ont créé un intérieur exceptionnel avec tribunes à courbes et contre-courbes, véritable joyau de l'art baroque méridional.</p>
-                        <a href="decor.html" class="btn btn-secondary">En savoir plus →</a>
+                <div class="text-content" style="flex:1;">
+                    <h3>L'Abbé Edouard Bruitte</h3>
+                    <div class="portrait-container" style="text-align:center;margin:1.5rem 0;">
+                        <img src="images/abbe-bruitte-portrait.png" alt="Portrait de l'abbé Edouard Bruitte" style="width:180px;height:auto;border-radius:8px;box-shadow:0 4px 15px rgba(0,0,0,0.2);border:3px solid var(--color-accent);">
+                        <p style="font-size:0.85rem;color:#666;margin-top:0.5rem;font-style:italic;">Portrait reconstitué par IA (source historique : Archives départementales 82)</p>
                     </div>
-                </div>
-                
-                <div class="summary-card animate">
-                    <div class="summary-card-image" style="background-image: url('images/Église_de_Lachapelle_2021_09_-_Vitrail.jpg')"></div>
-                    <div class="summary-card-content">
-                        <h3>🎫 Besuchen Sie die Kirche</h3>
-                        <p>Ouvert toute l'année sur rendez-vous. Découvrez les horaires, planifiez votre visite guidée et accédez à cet édifice classé Monument Historique depuis 1975.</p>
-                        <a href="visite.html" class="btn btn-primary">Planifier ma visite</a>
+                    <p>En <strong>1840</strong>, l'abbé <strong>Edouard Bruitte</strong> (né à Nancy en 1799, ancien aumônier militaire, chevalier de la Légion d'honneur depuis 1838) fut nommé curé de Lachapelle. Venu de Fontenay-aux-Roses où il enseignait la philosophie, il ramena avec lui sa sœur et ses deux nièces.</p>
+                    <p>Dès <strong>février 1842</strong>, l'évêché de Montauban s'émut de ce que le conseil de fabrique, à l'instigation de son curé, refusait de payer certaines redevances ecclésiastiques. Interdit par <a href="https://www.diocese-montauban.fr/le-diocese/histoire-et-patrimoine/listes-des-eveques/jean-vii-armand-chaudru-de-trelissac/" target="_blank" rel="noopener noreferrer" style="color:var(--color-primary);text-decoration:underline;"><strong>Mgr Chaudru de Trélissac</strong></a>, Bruitte répondit par un refus de soumission et publia le <strong>31 janvier 1843</strong>, à Lyon, ses <em>"Adieux à Rome"</em> : cinq éditions en deux ans, <strong>ainsi qu'</strong>une information judiciaire pour injure à la religion.</p>
+                    
+                    <div class="portraits-row" style="display:flex;gap:2rem;justify-content:center;flex-wrap:wrap;margin:1.5rem 0;">
+                        <div class="portrait-container" style="text-align:center;">
+                            <img src="images/mgr-chaudru-portrait.jpeg" alt="Portrait de Mgr Chaudru de Trélissac" style="width:160px;height:auto;border-radius:8px;box-shadow:0 4px 15px rgba(0,0,0,0.2);border:3px solid var(--color-accent);">
+                            <p style="font-size:0.85rem;color:#666;margin-top:0.5rem;font-style:italic;">Portrait<br><span style="font-size:0.75rem;">Source : Diocèse de Montauban</span></p>
+                        </div>
+                        <div class="portrait-container" style="text-align:center;">
+                            <img src="images/mgr-chaudru.jpg" alt="Mgr Chaudru de Trélissac" style="width:160px;height:auto;border-radius:8px;box-shadow:0 4px 15px rgba(0,0,0,0.2);border:3px solid var(--color-accent);">
+                            <p style="font-size:0.85rem;color:#666;margin-top:0.5rem;font-style:italic;">Jean-Armand Chaudru de Trélissac<br><span style="font-size:0.75rem;">Source : Diocèse de Montauban</span></p>
+                        </div>
+                        <div class="portrait-container" style="text-align:center;">
+                            <img src="images/mgr-chaudru-armoiries.jpeg" alt="Armoiries de Mgr Chaudru de Trélissac" style="width:160px;height:auto;border-radius:8px;box-shadow:0 4px 15px rgba(0,0,0,0.2);border:3px solid var(--color-accent);background:#fff;">
+                            <p style="font-size:0.85rem;color:#666;margin-top:0.5rem;font-style:italic;">Armoiries épiscopales<br><span style="font-size:0.75rem;">Source : Diocèse de Montauban</span></p>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="summary-card animate">
-                    <div class="summary-card-image" style="background-image: url('images/pretre-querelle-1840.png')"></div>
-                    <div class="summary-card-content">
-                        <h3>📜 Der Religiöse Streit</h3>
-                        <p>L'affaire Bruitte en 1840 et l'émergence d'une communauté protestante, un chapitre tumultueux de l'histoire religieuse de Lachapelle.</p>
-                        <a href="querelle.html" class="btn btn-secondary">En savoir plus →</a>
+                    <p>Il abjura, convolа en justes noces, et fut remplacé à Lachapelle par une succession de curés instables : Groussou (1842-1844), Glayel (1844-1847), puis Lagrange (1847-1857) qui apporta enfin la stabilité.</p>
+
+                    <h3>La Communauté Protestante</h3>
+                    
+                    <p>En <strong>1847</strong>, sous l'épiscopat de <a href="https://www.diocese-montauban.fr/le-diocese/histoire-et-patrimoine/listes-des-eveques/mgr-jean-marie-doney/" target="_blank" rel="noopener noreferrer" style="color:var(--color-primary);text-decoration:underline;"><strong>Mgr Doney</strong></a>, 19 fidèles de Lachapelle adressèrent une petition au consistoire de Montauban. Un oratoire fut ouvert le <strong>28 novembre 1847</strong>, desservi d'abord par le pasteur Frossard. Le <strong>11 août 1850</strong>, Pierre Momméja acheta une maison pour en faire un temple, consacré le <strong>28 mai 1851</strong>.</p>
+                    
+                    <div class="portraits-row" style="display:flex;gap:2rem;justify-content:center;flex-wrap:wrap;margin:1.5rem 0;">
+                        <div class="portrait-container" style="text-align:center;">
+                            <img src="images/mgr-doney.jpg" alt="Portrait de Mgr Jean-Marie Doney" style="width:160px;height:auto;border-radius:8px;box-shadow:0 4px 15px rgba(0,0,0,0.2);border:3px solid var(--color-accent);">
+                            <p style="font-size:0.85rem;color:#666;margin-top:0.5rem;font-style:italic;">Portrait officiel<br><span style="font-size:0.75rem;">Source : Diocèse de Montauban</span></p>
+                        </div>
+                        <div class="portrait-container" style="text-align:center;">
+                            <img src="images/mgr-doney-alt.jpeg" alt="Mgr Jean-Marie Doney" style="width:160px;height:auto;border-radius:8px;box-shadow:0 4px 15px rgba(0,0,0,0.2);border:3px solid var(--color-accent);">
+                            <p style="font-size:0.85rem;color:#666;margin-top:0.5rem;font-style:italic;">Jean-Marie Doney (1794-1871)<br><span style="font-size:0.75rem;">Source : Diocèse de Montauban</span></p>
+                        </div>
+                        <div class="portrait-container" style="text-align:center;">
+                            <img src="images/mgr-doney-armoiries.jpeg" alt="Armoiries de Mgr Jean-Marie Doney" style="width:160px;height:auto;border-radius:8px;box-shadow:0 4px 15px rgba(0,0,0,0.2);border:3px solid var(--color-accent);background:#fff;">
+                            <p style="font-size:0.85rem;color:#666;margin-top:0.5rem;font-style:italic;">Armoiries épiscopales<br><span style="font-size:0.75rem;">Source : Diocèse de Montauban</span></p>
+                        </div>
                     </div>
+                    
+                    <p>En 1856, le pasteur Corbière comptait <strong>29 fidèles</strong> : Lachapelle (13), Lavit (5), Castéra-Bouzet (5), Balignac (4), Gramont (2). Mais la situation financière resta fragile : déficits de 841 F (1855) et 653 F (1856), couverts par des subsides des sociétées évangéliques de Nîmes, Genève et Paris.</p>
+                    <p>Le pasteur Corbière nota en 1856 : <em>"Ils n'ont pas saisi par le meilleur côté l'Evangile. Ils ont surtout accepté notre religion par ses points négatifs, par ses oppositions avec le catholicisme."</em> Une conversion par réaction, en somme.</p>
+                    <p class="article-source">Source : Jean-Claude Fabre, « Une querelle religieuse à Lachapelle au XIXe siècle », <em>Bulletin de la Société archéologique de Tarn-et-Garonne</em>, t. 118, 1993, pp. 3-16.</p>
                 </div>
-            </div>
+            </div>        </div>
+    </div>
+    
+    <div class="carte-section" style="background:var(--color-bg-alt);padding:3rem 1rem;">
+        <div style="max-width:800px;margin:0 auto;text-align:center;">
+            <h4 style="color:var(--color-primary-dark);margin-bottom:1.5rem;font-family:'Cormorant Garamond',serif;font-size:1.4rem;">Le Diocèse de Montauban en 1885</h4>
+            <img src="images/diocese-montauban-1885.jpg" alt="Carte des paroisses du diocèse de Montauban en 1885" style="width:100%;max-width:700px;height:auto;border-radius:8px;box-shadow:0 4px 15px rgba(0,0,0,0.2);border:3px solid var(--color-accent);">
+            <p style="font-size:0.9rem;color:#666;margin-top:1rem;font-style:italic;">Carte des paroisses du diocèse de Montauban en 1885 — Lachapelle au cœur de la Lomagne Tarn-et-Garonnaise<br><span style="font-size:0.8rem;">Source : Diocèse de Montauban</span></p>
         </div>
-    </section>
-
-
+    </div>
 <footer>
-        <div class="footer-logo">Église Saint-Pierre de Lachapelle</div>
+        <div class="footer-logo">圣彼得教堂 de Lachapelle</div>
         <div class="footer-links">
             <a href="https://www.lachapelle82.fr" target="_blank" rel="noopener">lachapelle82.fr</a>
             <a href="https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Pierre_de_Lachapelle" target="_blank" rel="noopener">Wikipédia</a>
@@ -1299,23 +1259,5 @@
             Association des Amis de l'Église de Lachapelle — 82120 Lachapelle
         </p>
     </footer>
-
-    <script>
-        // Navigation scroll effect
-        window.addEventListener('scroll', () => {
-            document.querySelector('nav').classList.toggle('scrolled', window.scrollY > 100);
-        });
-        
-        // Animation on scroll
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1 });
-        
-        document.querySelectorAll('.animate').forEach(el => observer.observe(el));
-    </script>
-</body>
-</html>
+<script>window.addEventListener('scroll',()=>{document.querySelector('nav').classList.toggle('scrolled',window.scrollY>100)})</script>
+</body></html>

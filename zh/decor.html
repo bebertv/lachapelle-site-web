@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Église Saint-Pierre de Lachapelle — De l'Art Baroque à la campagne</title>
+    <title>圣彼得教堂 de Lachapelle — De l'Art Baroque à la campagne</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -283,7 +283,7 @@
             margin: 0 auto;
         }
 
-        /* Histoire */
+        /* 历史 */
         #histoire {
             background: var(--color-white);
         }
@@ -1093,110 +1093,41 @@
         display: block;
     }
 }
-
-        /* Language Selector Styling */
-        .nav-language {
-            position: relative;
-        }
-        
-        .nav-language::before {
-            content: '🌐';
-            position: absolute;
-            left: 12px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 0.9rem;
-            z-index: 2;
-            pointer-events: none;
-        }
-        
-        .nav-language select {
-            padding: 0.6rem 2.5rem 0.6rem 2.2rem;
-            border: 2px solid var(--color-accent);
-            border-radius: var(--radius-md);
-            background: linear-gradient(135deg, #faf8f5 0%, #f0ebe0 100%);
-            color: var(--color-primary-dark);
-            font-family: 'Outfit', sans-serif;
-            font-size: 0.85rem;
-            font-weight: 500;
-            cursor: pointer;
-            appearance: none;
-            -webkit-appearance: none;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%238b6914' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: calc(100% - 12px) center;
-            background-size: 0.8rem;
-            box-shadow: 0 2px 8px rgba(139, 105, 20, 0.1);
-            transition: all 0.3s ease;
-            min-width: 140px;
-        }
-        
-        .nav-language select:hover {
-            border-color: var(--color-primary);
-            box-shadow: 0 4px 12px rgba(201, 162, 39, 0.2);
-            transform: translateY(-2px);
-        }
-        
-        .nav-language select:focus {
-            outline: none;
-            border-color: var(--color-primary);
-            box-shadow: 0 0 0 3px rgba(201, 162, 39, 0.25);
-        }
-
-    
-        /* Language Flag Display */
-        .nav-language {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            position: relative;
-        }
-        
-        .lang-flag {
-            font-size: 1.4rem;
-            margin-right: 0.3rem;
-            filter: drop-shadow(0 1px 2px rgba(0,0,0,0.1));
-        }
-        
-        .nav-language {
-            padding-left: 0.5rem;
-        }
-        
-        .nav-language::before {
-            display: none; /* On remplace l'icône par le drapeau */
-        }
-        
-        .nav-language select {
-            padding: 0.6rem 2.5rem 0.6rem 0.8rem;
-            min-width: 130px;
-        }
-
-    </style>
+/* Detail pages */
+.detail-hero { min-height: 40vh; background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%); display: flex; align-items: center; justify-content: center; text-align: center; color: white; padding: 6rem 2rem 3rem; }
+.detail-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.5rem); }
+.breadcrumb { background: var(--color-bg-alt); padding: 1rem 2rem; font-size: 0.9rem; }
+.breadcrumb a { color: var(--color-primary); text-decoration: none; }
+.detail-content { max-width: 900px; margin: 0 auto; padding: 3rem 2rem; }
+.detail-content h2 { font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: var(--color-primary-dark); margin: 2.5rem 0 1rem; }
+.detail-content h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--color-primary); margin: 2rem 0 0.75rem; }
+.detail-content p { margin-bottom: 1rem; line-height: 1.8; color: var(--color-text-light); }
+</style>
 </head>
 <body>
-    <nav>
+<nav>
         <a href="index.html" class="nav-logo">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
             </svg>
-            Église Saint-Pierre
+            圣彼得教堂
         </a>
         <ul class="nav-links">
-            <li><a href="index.html">Accueil</a></li>
+            <li><a href="index.html">首页</a></li>
             <li>
-                <a href="histoire.html">L'Église ▼</a>
+                <a href="#">L'Église ▼</a>
                 <div class="dropdown">
-                    <a href="histoire.html">🏛️ Histoire</a>
-                    <a href="decor.html">✨ Die Barocke Innenausstattung</a>
-                    <a href="querelle.html">📜 Der Religiöse Streit</a>
+                    <a href="histoire.html">🏛️ 历史</a>
+                    <a href="decor.html">✨ Le Décor Baroque</a>
+                    <a href="querelle.html">📜 La Querelle Religieuse</a>
                 </div>
             </li>
             <li>
-                <a href="visite.html">Visiter ▼</a>
+                <a href="#">参观 ▼</a>
                 <div class="dropdown">
                     <a href="visite.html">🎫 Planifier ma visite</a>
                     <a href="visite.html#horaires">🕐 Horaires</a>
-                    <a href="visite.html#contact">📞 Contact</a>
+                    <a href="visite.html#contact">📞 联系</a>
                 </div>
             </li>
         </ul>
@@ -1214,82 +1145,233 @@
             <span></span>
         </div>
     </nav>
-
-
-<section class="hero">
-        <div class="hero-bg"></div>
-        <div class="hero-content">
-            <div class="hero-badge">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-                </svg>
-                Monument Historique
-            </div>
-            <h1>Église Saint-Pierre<br>de <em>Lachapelle</em></h1>
-            <p class="hero-subtitle">Un joyau baroque du XVIIIe siècle au cœur de la Lomagne, la "Toscane française". Une découverte exceptionnelle qui surprend et subjugue.</p>
-            <div class="hero-cta">
-                <a href="visite.html" class="btn btn-primary">Visiter</a>
-                <a href="#decouvrir" class="btn btn-secondary">Découvrir</a>
-            </div>
-        </div>
-        <div class="hero-scroll">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 5v14M5 12l7 7 7-7"/>
-            </svg>
-        </div>
-    </section>
-
-    <section class="summary-section" id="decouvrir">
+<section class="detail-hero"><div><h1>Le Décor Baroque</h1></div></section>
+<div class="breadcrumb"><div style="max-width:1200px;margin:0 auto"><a href="index.html">← ← 返回首页</a></div></div>
+<div class="detail-content">
         <div class="container">
-            <div class="section-header animate">
-                <span class="section-tag">Découvrir</span>
-                <h2 class="section-title">Un Patrimoine Exceptionnel</h2>
-                <p class="section-subtitle">Explorez l'histoire et les trésors de cette église baroque unique</p>
+            <divclass="section-header ">
+                <span class="section-tag">Trésor Baroque</span>
+                <h2 class="section-title">Un Décor Intérieur Unique</h2>
+                <p class="section-subtitle">L'intérieur de l'église, réalisé entre 1762 et 1776, est un témoignage exceptionnel de l'art baroque méridional</p>
             </div>
-            
-            <div class="summary-grid">
-                <div class="summary-card animate">
-                    <div class="summary-card-image" style="background-image: url('images/Lachapelle.jpg')"></div>
-                    <div class="summary-card-content">
-                        <h3>🏛️ Eine Jahrtausende alte Geschichte</h3>
-                        <p>Du village de Saint-Hilaire aux guerres de religion, cinq siècles d'histoire en Lomagne. Découvrez le château, la commanderie templière et les événements qui ont façonné Lachapelle.</p>
-                        <a href="histoire.html" class="btn btn-secondary">En savoir plus →</a>
+
+            <div class="histoire-grid">
+                <divclass="histoire-content ">
+                    <h3>Les Frères Goulard — Mécènes d'exception</h3>
+                    <p>En <strong>1761</strong>, les frères <strong>Jean-Baptiste Goulard</strong> (curé de Lachapelle de 1746 à 1787) et <strong>Jean Goulard</strong> (vicaire à partir de 1754) entreprirent de doter leur église d'un nouveau decor grâce à un important héritage paternel. Issus d'une famille de notables fortunés — dont on retrouve le nom à Lectoure — ils eurent les moyens de leurs ambitions.</p>
+                    <p>Le curé Jean-Baptiste avait étudié la théologie et été ordonné prêtre à <strong>Rome</strong> — ce qui explique peut-être le choix d'un décor rappelant les églises romaines. Une tradition locale, encore vivante il y a cinquante ans, voulait qu'une messe soit célébrée chaque année à leur mémoire.</p>
+                    <p>Les recherches d'<strong>Agnès Clouzet-Llorens</strong> (1993) dans les Archives diocésaines et les registres de catholicité ont permis de retracer leur chronologie : Jean-Baptiste Goulard signe comme curé dès le 24 septembre 1746 ; son frère Jean devient vicaire en 1754, sous l'épiscopat de Mgr de Narbonne-Pelet. En 1784, l'évêché de Lectoure nomme un coadjuteur, M. Dufour, car le curé Goulard est devenu impotent. Sa signature disparaît en 1787.</p>
+
+                    <h3>Bertrand Maraignon, dit Champaigne — Menuisier-ébéniste</h3>
+                    <p>L'artisan qui réalisa l'essentiel du decor entre 1761 et 1776 est identifié par une inscription gravée au-dessus de la porte d'entrée intérieure :</p>
+                    <blockquote><em>« FECIT B. MARAIGNON D. CHAMPAIGNE MINUTARIUS SCULPTOR 1776 — PASTORIBUS ANIMARUM J*B*I*J*J* GOULARD FRATRIBUS M. ABADIE INAURAT »</em></blockquote>
+                    <p><strong>Bertrand Maraignon</strong>, dit <em>Champaigne</em>, était un menuisier-ébéniste de Lectoure. L'artiste doreur <strong>M. Abadie</strong> exécuta les dorures — sans qu'on puisse le retracer dans les archives locales. Le decor fut achevé en <strong>1776</strong>.</p>
+                    <p>Formation d'ébéniste, Maraignon excellait dans les motifs décoratifs : chaque feuille, fleur et palmette diffère des autres, témoignant d'une maîtrise remarquable du bois. En revanche, le travail figuratif (putti, scènes de l'Annonciation et de la Visitation) reste plus schematic — les restaurations du XIXe siècle ont également noyé les attitudes dans la dorure.</p>
+
+                    <h3>Un Decor Unique dans le Sud-Ouest</h3>
+                    <p>Les tribunes à <strong>courbes et contre-courbes sur trois étages</strong> constituent l'originalité majeure de l'église. reservas aux hommes, elles forment un ensemble sans équivalent connu dans un large rayon. Le rythme de l'élévation crée un véritable <em>quadrillage</em> : verticales (pilastres et chapiteaux) s'opposant aux horizontales (balustrades sur trois niveaux).</p>
+                    <p>Style <strong>rocaille</strong> dans l'air du temps — le midi ayant conservé plus longtemps le goût pour un art exubérant — mais les travaux (1761-1776) démarrèrent alors que Paris passait déjà au néoclassique. <em>« L'église devient palais, débordante de vie et de dorure »</em> (Clouzet-Llorens).</p>
+
+                    <div class="bulletin-figures">
+                        <div class="figure-grid">
+                            <figureclass="figure-item ">
+                                <a href="images/bulletin/plan_au_sol.jpg" data-lightbox="bulletin">
+                                    <img src="images/bulletin/plan_au_sol.jpg" alt="Plan au sol de l'église, B. Voinchet, Monuments Historiques">
+                                </a>
+                                <figcaption>Fig. 1 — Plan au sol (B. Voinchet, Monuments Historiques)</figcaption>
+                            </figure>
+                            <figureclass="figure-item ">
+                                <a href="images/bulletin/coupe_longitudinale.jpg" data-lightbox="bulletin">
+                                    <img src="images/bulletin/coupe_longitudinale.jpg" alt="Coupe longitudinale de l'église">
+                                </a>
+                                <figcaption>Fig. 2 — Coupe longitudinale (B. Voinchet, MH)</figcaption>
+                            </figure>
+                            <figureclass="figure-item ">
+                                <a href="images/bulletin/coupes_transversales.jpg" data-lightbox="bulletin">
+                                    <img src="images/bulletin/coupes_transversales.jpg" alt="Coupes transversales, tribunes">
+                                </a>
+                                <figcaption>Fig. 3 — Coupes transversales — Tribunes</figcaption>
+                            </figure>
+                        </div>
+                        <p class="figures-source">Source : Agnès Clouzet-Llorens, <em>La paroisse et l'église de Lachapelle au XVIIIe siècle</em>, Bulletin de la Société archéologique de Tarn-et-Garonne, t. 118, 1993.</p>
+                    </div>
+
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-date">1761</div>
+                            <div class="timeline-text">Début des travaux sous l'épiscopat de Mgr de Narbonne-Pelet</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">1776</div>
+                            <div class="timeline-text">Fin des travaux — inscription de Maraignon/Champaigne et M. Abadie</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">1787</div>
+                            <div class="timeline-text">Dernière signature du curé Goulard, remplacé par M. Dufour</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">1861</div>
+                            <div class="timeline-text">Restauration par le doreur D.A. Canoni</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">1879</div>
+                            <div class="timeline-text">Nouvelle restauration par Laforgue et O. Robert</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">1991</div>
+                            <div class="timeline-text">Restitution du plafond d'origine du XVIIIe siècle</div>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="summary-card animate">
-                    <div class="summary-card-image" style="background-image: url('images/Église_de_Lachapelle_2021_05_-_Chaire.jpg')"></div>
-                    <div class="summary-card-content">
-                        <h3>✨ Die Barocke Innenausstattung</h3>
-                        <p>Les frères Goulard et l'artiste Maraignon ont créé un intérieur exceptionnel avec tribunes à courbes et contre-courbes, véritable joyau de l'art baroque méridional.</p>
-                        <a href="decor.html" class="btn btn-secondary">En savoir plus →</a>
-                    </div>
+                <divclass="histoire-image ">
+                    <img src="images/bulletin/tribunes_et_chaire.jpg" alt="Tribunes et chaire baroque de l'église Saint-Pierre">
                 </div>
-                
-                <div class="summary-card animate">
-                    <div class="summary-card-image" style="background-image: url('images/Église_de_Lachapelle_2021_09_-_Vitrail.jpg')"></div>
-                    <div class="summary-card-content">
-                        <h3>🎫 Besuchen Sie die Kirche</h3>
-                        <p>Ouvert toute l'année sur rendez-vous. Découvrez les horaires, planifiez votre visite guidée et accédez à cet édifice classé Monument Historique depuis 1975.</p>
-                        <a href="visite.html" class="btn btn-primary">Planifier ma visite</a>
+            </div>
+
+            <div class="decoration-features">
+                <divclass="feature-card ">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+                            <polyline points="9 22 9 12 15 12 15 22"/>
+                        </svg>
                     </div>
+                    <h4>Style Rococo</h4>
+                    <p>Des courbes et contre-courbes caractéristiques du style rocaille, bien que postérieur à la mode de ce style</p>
                 </div>
-                
-                <div class="summary-card animate">
-                    <div class="summary-card-image" style="background-image: url('images/pretre-querelle-1840.png')"></div>
-                    <div class="summary-card-content">
-                        <h3>📜 Der Religiöse Streit</h3>
-                        <p>L'affaire Bruitte en 1840 et l'émergence d'une communauté protestante, un chapitre tumultueux de l'histoire religieuse de Lachapelle.</p>
-                        <a href="querelle.html" class="btn btn-secondary">En savoir plus →</a>
+                <divclass="feature-card ">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2"/>
+                            <path d="M3 9h18M9 21V9"/>
+                        </svg>
                     </div>
+                    <h4>Tribunes Théâtrales</h4>
+                    <p>Deux étages de tribunes convexes et concaves —unique dans la région— prévues pour accueillir les paroissiens</p>
                 </div>
+                <divclass="feature-card ">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 2a7 7 0 017 7"/>
+                            <circle cx="12" cy="9" r="3"/>
+                        </svg>
+                    </div>
+                    <h4>Impression de Théâtre</h4>
+                    <p>La richesse du décor s'inspire des décisions de la Contre-Réforme — la Compagnie de Jésus accordait une grande place aux actions théâtrales</p>
+                </div>
+                <divclass="feature-card ">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <h4>Une Exception Régionale</h4>
+                    <p>Cette décoration est unique dans tout le Sud-Ouest — un mariage réussi entre tradition locale et influences romaines</p>
+                </div>
+            </div>
+
+            <divclass="bulletin-gallery-section ">
+                <h3 class="gallery-title">Planches & Photographies du Bulletin</h3>
+                <p class="gallery-subtitle">Toutes les figures publiées par Agnès Clouzet-Llorens dans le Bulletin de la Société archéologique de Tarn-et-Garonne (1993)</p>
+                <div class="gallery-grid">
+                    <figure class="gallery-item">
+                        <a href="images/bulletin/plan_au_sol.jpg" data-lightbox="bulletin" data-title="Fig. 1 — Plan au sol (B. Voinchet, Monuments Historiques)">
+                            <img src="images/bulletin/plan_au_sol.jpg" alt="Plan au sol">
+                            <div class="gallery-caption">Fig. 1 — Plan au sol</div>
+                        </a>
+                    </figure>
+                    <figure class="gallery-item">
+                        <a href="images/bulletin/coupe_longitudinale.jpg" data-lightbox="bulletin" data-title="Fig. 2 — Coupe longitudinale">
+                            <img src="images/bulletin/coupe_longitudinale.jpg" alt="Coupe longitudinale">
+                            <div class="gallery-caption">Fig. 2 — Coupe longitudinale</div>
+                        </a>
+                    </figure>
+                    <figure class="gallery-item">
+                        <a href="images/bulletin/coupes_transversales.jpg" data-lightbox="bulletin" data-title="Fig. 3 — Coupes transversales">
+                            <img src="images/bulletin/coupes_transversales.jpg" alt="Coupes transversales">
+                            <div class="gallery-caption">Fig. 3 — Coupes transversales</div>
+                        </a>
+                    </figure>
+                    <figure class="gallery-item">
+                        <a href="images/bulletin/vue_interieure_1.jpg" data-lightbox="bulletin" data-title="Vue intérieure (1)">
+                            <img src="images/bulletin/vue_interieure_1.jpg" alt="Vue intérieure 1">
+                            <div class="gallery-caption">Vue intérieure — Début de l'article</div>
+                        </a>
+                    </figure>
+                    <figure class="gallery-item">
+                        <a href="images/bulletin/vue_interieure_2.jpg" data-lightbox="bulletin" data-title="Vue intérieure (2)">
+                            <img src="images/bulletin/vue_interieure_2.jpg" alt="Vue intérieure 2">
+                            <div class="gallery-caption">Vue intérieure — Architecture</div>
+                        </a>
+                    </figure>
+                    <figure class="gallery-item">
+                        <a href="images/bulletin/vue_interieure_3.jpg" data-lightbox="bulletin" data-title="Vue intérieure (3)">
+                            <img src="images/bulletin/vue_interieure_3.jpg" alt="Vue intérieure 3">
+                            <div class="gallery-caption">Vue intérieure — Tribunes</div>
+                        </a>
+                    </figure>
+                    <figure class="gallery-item">
+                        <a href="images/bulletin/tribunes_et_chaire.jpg" data-lightbox="bulletin" data-title="Tribunes et chaire">
+                            <img src="images/bulletin/tribunes_et_chaire.jpg" alt="Tribunes et chaire">
+                            <div class="gallery-caption">Tribunes et chaire rocaille</div>
+                        </a>
+                    </figure>
+                    <figure class="gallery-item">
+                        <a href="images/bulletin/maitre_autel.jpg" data-lightbox="bulletin" data-title="Maître-autel">
+                            <img src="images/bulletin/maitre_autel.jpg" alt="Maître-autel">
+                            <div class="gallery-caption">Maître-autel baroque</div>
+                        </a>
+                    </figure>
+                    <figure class="gallery-item">
+                        <a href="images/bulletin/decoration_bois_dore.jpg" data-lightbox="bulletin" data-title="Décoration bois doré">
+                            <img src="images/bulletin/decoration_bois_dore.jpg" alt="Décoration bois doré">
+                            <div class="gallery-caption">Décoration en bois doré</div>
+                        </a>
+                    </figure>
+                    <figure class="gallery-item">
+                        <a href="images/bulletin/interieur_eglise_1.jpg" data-lightbox="bulletin" data-title="Intérieur (1)">
+                            <img src="images/bulletin/interieur_eglise_1.jpg" alt="Intérieur église 1">
+                            <div class="gallery-caption">Intérieur — Quadrillage classique</div>
+                        </a>
+                    </figure>
+                    <figure class="gallery-item">
+                        <a href="images/bulletin/interieur_eglise_2.jpg" data-lightbox="bulletin" data-title="Intérieur (2)">
+                            <img src="images/bulletin/interieur_eglise_2.jpg" alt="Intérieur église 2">
+                            <div class="gallery-caption">Intérieur — Ornementation</div>
+                        </a>
+                    </figure>
+                    <figure class="gallery-item">
+                        <a href="images/bulletin/interieur_eglise_3.jpg" data-lightbox="bulletin" data-title="Intérieur (3)">
+                            <img src="images/bulletin/interieur_eglise_3.jpg" alt="Intérieur église 3">
+                            <div class="gallery-caption">Intérieur — Les Goulard</div>
+                        </a>
+                    </figure>
+                    <figure class="gallery-item">
+                        <a href="images/bulletin/reliquaire.jpg" data-lightbox="bulletin" data-title="Reliquaire">
+                            <img src="images/bulletin/reliquaire.jpg" alt="Reliquaire">
+                            <div class="gallery-caption">Reliquaire de Saint-Prosper</div>
+                        </a>
+                    </figure>
+                    <figure class="gallery-item">
+                        <a href="images/bulletin/mobilier_complet.jpg" data-lightbox="bulletin" data-title="Mobilier complet">
+                            <img src="images/bulletin/mobilier_complet.jpg" alt="Mobilier complet">
+                            <div class="gallery-caption">Mobilier — Stalles, lutrin</div>
+                        </a>
+                    </figure>
+                    <figure class="gallery-item">
+                        <a href="images/bulletin/conclusion_et_source.jpg" data-lightbox="bulletin" data-title="Conclusion et sources">
+                            <img src="images/bulletin/conclusion_et_source.jpg" alt="Conclusion et sources">
+                            <div class="gallery-caption">Conclusion & sources de l'article</div>
+                        </a>
+                    </figure>
+                </div>
+                <p class="gallery-source">Agnès Clouzet-Llorens, « La paroisse et l'église de Lachapelle au XVIIIe siècle », <em>Bulletin de la Société archéologique de Tarn-et-Garonne</em>, t. 118, 1993, pp. 17-32. Reproduit avec l'aimable autorisation de la Société archéologique.</p>
             </div>
         </div>
-    </section>
-
-
+    </div>
 <footer>
-        <div class="footer-logo">Église Saint-Pierre de Lachapelle</div>
+        <div class="footer-logo">圣彼得教堂 de Lachapelle</div>
         <div class="footer-links">
             <a href="https://www.lachapelle82.fr" target="_blank" rel="noopener">lachapelle82.fr</a>
             <a href="https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Pierre_de_Lachapelle" target="_blank" rel="noopener">Wikipédia</a>
@@ -1299,23 +1381,5 @@
             Association des Amis de l'Église de Lachapelle — 82120 Lachapelle
         </p>
     </footer>
-
-    <script>
-        // Navigation scroll effect
-        window.addEventListener('scroll', () => {
-            document.querySelector('nav').classList.toggle('scrolled', window.scrollY > 100);
-        });
-        
-        // Animation on scroll
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1 });
-        
-        document.querySelectorAll('.animate').forEach(el => observer.observe(el));
-    </script>
-</body>
-</html>
+<script>window.addEventListener('scroll',()=>{document.querySelector('nav').classList.toggle('scrolled',window.scrollY>100)})</script>
+</body></html>

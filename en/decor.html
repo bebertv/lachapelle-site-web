@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -1102,35 +1102,7 @@
 .detail-content h2 { font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: var(--color-primary-dark); margin: 2.5rem 0 1rem; }
 .detail-content h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--color-primary); margin: 2rem 0 0.75rem; }
 .detail-content p { margin-bottom: 1rem; line-height: 1.8; color: var(--color-text-light); }
-
-        /* Language Flag Display */
-        .nav-language {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            position: relative;
-        }
-        
-        .lang-flag {
-            font-size: 1.4rem;
-            margin-right: 0.3rem;
-            filter: drop-shadow(0 1px 2px rgba(0,0,0,0.1));
-        }
-        
-        .nav-language {
-            padding-left: 0.5rem;
-        }
-        
-        .nav-language::before {
-            display: none; /* On remplace l'icône par le drapeau */
-        }
-        
-        .nav-language select {
-            padding: 0.6rem 2.5rem 0.6rem 0.8rem;
-            min-width: 130px;
-        }
-
-    </style>
+</style>
 </head>
 <body>
 <nav>
@@ -1141,31 +1113,31 @@
             Église Saint-Pierre
         </a>
         <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Accueil</a></li>
             <li>
-                <a href="#">The Church ▼</a>
+                <a href="#">L'Église ▼</a>
                 <div class="dropdown">
-                    <a href="history.html">🏛️ Histoire</a>
-                    <a href="decor.html">✨ Le Décor Baroque</a>
-                    <a href="dispute.html">📜 La Querelle Religieuse</a>
+                    <a href="histoire.html">🏛️ Histoire</a>
+                    <a href="decor.html">✨ The Baroque Decor</a>
+                    <a href="querelle.html">📜 The Religious Dispute</a>
                 </div>
             </li>
             <li>
-                <a href="#">Visit ▼</a>
+                <a href="#">Visiter ▼</a>
                 <div class="dropdown">
-                    <a href="visit.html">🎫 Planifier ma visite</a>
+                    <a href="visite.html">🎫 Planifier ma visite</a>
                     <a href="visite.html#horaires">🕐 Horaires</a>
                     <a href="visite.html#contact">📞 Contact</a>
                 </div>
             </li>
         </ul>
         <div class="nav-language">
-            <span class="lang-flag">🇬🇧</span>
-            <select id="language-select" aria-label="Select language" onchange="window.location.href=this.value">
-                <option value="../index.html">Français</option>
-                <option value="./index.html" selected>English</option>
-                <option value="../nl/index.html">Nederlands</option>
-                <option value="../de/index.html">Deutsch</option>
+            <span class="lang-flag">🇫🇷</span>
+            <select id="language-select" aria-label="Sélectionner la langue" onchange="window.location.href=this.value">
+                <option value="../index.html" selected>Français</option>
+                <option value="./en/index.html">English</option>
+                <option value="./nl/index.html">Nederlands</option>
+                <option value="./de/index.html">Deutsch</option>
 </select>
         </div><div class="nav-toggle">
             <span></span>
@@ -1173,228 +1145,228 @@
             <span></span>
         </div>
     </nav>
-<section class="detail-hero"><div><h1>Baroque Decor</h1></div></section>
-<div class="breadcrumb"><div style="max-width:1200px;margin:0 auto"><a href="index.html">← Back to Home</a></div></div>
+<section class="detail-hero"><div><h1>The Baroque Decor</h1></div></section>
+<div class="breadcrumb"><div style="max-width:1200px;margin:0 auto"><a href="index.html">← Retour à l'accueil</a></div></div>
 <div class="detail-content">
         <div class="container">
-            <div class="section-header ">
-                <span class="section-tag">Treasure Baroque</span>
-                <h2 class="section-title">A Unique Interior Decor</h2>
-                <p class="section-subtitle">The interior of the church, realized between 1762 and 1776, is an exceptional testimony of southern baroque art</p>
+            <divclass="section-header ">
+                <span class="section-tag">Trésor Baroque</span>
+                <h2 class="section-title">Un Décor Intérieur Unique</h2>
+                <p class="section-subtitle">L'intérieur de l'église, réalisé entre 1762 et 1776, est un témoignage exceptionnel de l'art baroque méridional</p>
             </div>
 
             <div class="histoire-grid">
-                <div class="histoire-content ">
-                    <h3>The Goulard Brothers — Exceptional Patrons</h3>
-                    <p>En <strong>1761</strong>, brothers<strong>Jean-Baptiste Goulard</strong>(curé de Lachapelle from 1746 to 1787) and<strong>Jean Goulard</strong>(Vicar from 1754) undertook to equip their church with a new decor thanks to an important paternal heritage. They came from a family of wealthy notables — whose name is found in Lectoure — they had the means of their ambitions.</p>
-                    <p>The parish priest John the Baptist had studied theology and was ordained a priest to<strong>Rome</strong>— which may explain the choice of a decoration reminiscent of Roman churches. A local tradition, still alive fifty years ago, wanted a mass to be celebrated every year in their memory.</p>
-                    <p>Research<strong>Agnes Clouzet-Llorens</strong>(1993) in the Diocesan Archives and the Catholic records allowed to trace their chronology: Jean-Baptiste Goulard signed as parish priest on 24 September 1746; his brother Jean became vicar in 1754, under the episcopate of Bishop de Narbonne-Pelet. In 1784 the bishopric of Lectoure appointed a coadjutor, M. Dufour, because the parish priest Goulard became impotent. His signature disappeared in 1787.</p>
+                <divclass="histoire-content ">
+                    <h3>The Goulard Brothers — Mécènes d'exception</h3>
+                    <p>En <strong>1761</strong>, les frères <strong>Jean-Baptiste Goulard</strong> (curé de Lachapelle de 1746 à 1787) et <strong>Jean Goulard</strong> (vicaire à partir de 1754) entreprirent de doter leur église d'un nouveau decor grâce à un important héritage paternel. Issus d'une famille de notables fortunés — dont on retrouve le nom à Lectoure — ils eurent les moyens de leurs ambitions.</p>
+                    <p>Le curé Jean-Baptiste avait étudié la théologie et été ordonné prêtre à <strong>Rome</strong> — ce qui explique peut-être le choix d'un décor rappelant les églises romaines. Une tradition locale, encore vivante il y a cinquante ans, voulait qu'une messe soit célébrée chaque année à leur mémoire.</p>
+                    <p>Les recherches d'<strong>Agnès Clouzet-Llorens</strong> (1993) dans les Archives diocésaines et les registres de catholicité ont permis de retracer leur chronologie : Jean-Baptiste Goulard signe comme curé dès le 24 septembre 1746 ; son frère Jean devient vicaire en 1754, sous l'épiscopat de Mgr de Narbonne-Pelet. En 1784, l'évêché de Lectoure nomme un coadjuteur, M. Dufour, car le curé Goulard est devenu impotent. Sa signature disparaît en 1787.</p>
 
-                    <h3>Bertrand Maraignon, dit Champaigne — Menuier-ébiniste</h3>
-                    <p>The craftsman who realized the essentials of the decor between 1761 and 1776 is identified by an inscription engraved above the inner entrance door:</p>
+                    <h3>Bertrand Maraignon, dit Champaigne — Menuisier-ébéniste</h3>
+                    <p>L'artisan qui réalisa l'essentiel du decor entre 1761 et 1776 est identifié par une inscription gravée au-dessus de la porte d'entrée intérieure :</p>
                     <blockquote><em>« FECIT B. MARAIGNON D. CHAMPAIGNE MINUTARIUS SCULPTOR 1776 — PASTORIBUS ANIMARUM J*B*I*J*J* GOULARD FRATRIBUS M. ABADIE INAURAT »</em></blockquote>
-                    <p><strong>Bertrand Maraignon</strong>says<em>Field</em>, was a carpenter cabinetmaker from Lectoure. The Golden Artist<strong>Mr. Abadie</strong>executed the gilding — without being traceable in the local archives. The decor was completed in<strong>1776</strong>.</p>
-                    <p>A cabinetmaker, Maraignon excelled in decorative motifs: each leaf, flower and palmette differs from the others, showing a remarkable mastery of wood. On the other hand, figurative work (putti, scenes of the Annunciation and the Visitation) remains more schematic — 19th century restorations also drowned attitudes in gilding.</p>
+                    <p><strong>Bertrand Maraignon</strong>, dit <em>Champaigne</em>, était un menuisier-ébéniste de Lectoure. L'artiste doreur <strong>M. Abadie</strong> exécuta les dorures — sans qu'on puisse le retracer dans les archives locales. Le decor fut achevé en <strong>1776</strong>.</p>
+                    <p>Formation d'ébéniste, Maraignon excellait dans les motifs décoratifs : chaque feuille, fleur et palmette diffère des autres, témoignant d'une maîtrise remarquable du bois. En revanche, le travail figuratif (putti, scènes de l'Annonciation et de la Visitation) reste plus schematic — les restaurations du XIXe siècle ont également noyé les attitudes dans la dorure.</p>
 
-                    <h3>A Unique Decor in the South West</h3>
-                    <p>The forums<strong>curves and counter-curves on three floors</strong>constitute the major originality of the church. Reserving men, they form a set without equivalent known within a wide radius. The pace of the rise creates a real<em>grid</em>: vertical (pillars and capitals) opposing the horizontal (balustrades on three levels).</p>
-                    <p>Style<strong>rock</strong>in the air of time — the midday having kept the taste for an exuberant art longer — but the works (1761-1776) started as Paris was already moving to the neoclassical.<em>" The church becomes a palace, overflowing with life and gilding »</em>(Cluzet-Llorens).</p>
+                    <h3>Un Decor Unique dans le Sud-Ouest</h3>
+                    <p>Les tribunes à <strong>courbes et contre-courbes sur trois étages</strong> constituent l'originalité majeure de l'église. reservas aux hommes, elles forment un ensemble sans équivalent connu dans un large rayon. Le rythme de l'élévation crée un véritable <em>quadrillage</em> : verticales (pilastres et chapiteaux) s'opposant aux horizontales (balustrades sur trois niveaux).</p>
+                    <p>Style <strong>rocaille</strong> dans l'air du temps — le midi ayant conservé plus longtemps le goût pour un art exubérant — mais les travaux (1761-1776) démarrèrent alors que Paris passait déjà au néoclassique. <em>« L'église devient palais, débordante de vie et de dorure »</em> (Clouzet-Llorens).</p>
 
                     <div class="bulletin-figures">
                         <div class="figure-grid">
                             <figureclass="figure-item ">
                                 <a href="images/bulletin/plan_au_sol.jpg" data-lightbox="bulletin">
-                                    <img src="images/bulletin/plan_au_sol.jpg" alt="Plan au sol de l'église, B. Voinchet, Monuments Historiques">
+                                    <img src="images/bulletin/plan_au_sol.jpg" alt="Floor Plan de l'église, B. Voinchet, Monuments Historiques">
                                 </a>
-                                <figcaption>Fig. 1 — Ground plan (B. Voichet, Historical Monuments)</figcaption>
+                                <figcaption>Fig. 1 — Floor Plan (B. Voinchet, Monuments Historiques)</figcaption>
                             </figure>
                             <figureclass="figure-item ">
                                 <a href="images/bulletin/coupe_longitudinale.jpg" data-lightbox="bulletin">
                                     <img src="images/bulletin/coupe_longitudinale.jpg" alt="Coupe longitudinale de l'église">
                                 </a>
-                                <figcaption>Fig. 2 — Longitudinal section (B. Voichet, MH)</figcaption>
+                                <figcaption>Fig. 2 — Coupe longitudinale (B. Voinchet, MH)</figcaption>
                             </figure>
                             <figureclass="figure-item ">
                                 <a href="images/bulletin/coupes_transversales.jpg" data-lightbox="bulletin">
                                     <img src="images/bulletin/coupes_transversales.jpg" alt="Coupes transversales, tribunes">
                                 </a>
-                                <figcaption>Fig. 3 — Cross sections — Tribune</figcaption>
+                                <figcaption>Fig. 3 — Coupes transversales — Tribunes</figcaption>
                             </figure>
                         </div>
-                        <p class="figures-source">Source: Agnes Clouzet-Llorens,<em>The parish and church of Lachapelle in the 18th century</em>Bulletin of the Archaeological Society of Tarn-et-Garonne, vol. 118, 1993.</p>
+                        <p class="figures-source">Source : Agnès Clouzet-Llorens, <em>La paroisse et l'église de Lachapelle au XVIIIe siècle</em>, Bulletin de la Société archéologique de Tarn-et-Garonne, t. 118, 1993.</p>
                     </div>
 
                     <div class="timeline">
                         <div class="timeline-item">
                             <div class="timeline-date">1761</div>
-                            <div class="timeline-text">Start of work under the episcopate of Bishop Narbonne-Pelet</div>
+                            <div class="timeline-text">Début des travaux sous l'épiscopat de Mgr de Narbonne-Pelet</div>
                         </div>
                         <div class="timeline-item">
                             <div class="timeline-date">1776</div>
-                            <div class="timeline-text">End of work — inscription by Maraignon/Champaigne and Mr Abadie</div>
+                            <div class="timeline-text">Fin des travaux — inscription de Maraignon/Champaigne et M. Abadie</div>
                         </div>
                         <div class="timeline-item">
                             <div class="timeline-date">1787</div>
-                            <div class="timeline-text">Last signature of parish priest Goulard, replaced by Mr Dufour</div>
+                            <div class="timeline-text">Dernière signature du curé Goulard, remplacé par M. Dufour</div>
                         </div>
                         <div class="timeline-item">
                             <div class="timeline-date">1861</div>
-                            <div class="timeline-text">Restoration by goldsmith D.A. Canoni</div>
+                            <div class="timeline-text">Restauration par le doreur D.A. Canoni</div>
                         </div>
                         <div class="timeline-item">
                             <div class="timeline-date">1879</div>
-                            <div class="timeline-text">New restoration by Laforgue and O. Robert</div>
+                            <div class="timeline-text">Nouvelle restauration par Laforgue et O. Robert</div>
                         </div>
                         <div class="timeline-item">
                             <div class="timeline-date">1991</div>
-                            <div class="timeline-text">Restitution of the 18th century original ceiling</div>
+                            <div class="timeline-text">Restitution du plafond d'origine du XVIIIe siècle</div>
                         </div>
                     </div>
                 </div>
-                <div class="histoire-image ">
+                <divclass="histoire-image ">
                     <img src="images/bulletin/tribunes_et_chaire.jpg" alt="Tribunes et chaire baroque de l'église Saint-Pierre">
                 </div>
             </div>
 
             <div class="decoration-features">
-                <div class="feature-card ">
+                <divclass="feature-card ">
                     <div class="feature-icon">
-                        <svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"></path>
-                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+                            <polyline points="9 22 9 12 15 12 15 22"/>
                         </svg>
                     </div>
-                    <h4>Rococo Style</h4>
-                    <p>Curves and countercurves characteristic of the rock style, although after the fashion of this style</p>
+                    <h4>Style Rococo</h4>
+                    <p>Des courbes et contre-courbes caractéristiques du style rocaille, bien que postérieur à la mode de ce style</p>
                 </div>
-                <div class="feature-card ">
+                <divclass="feature-card ">
                     <div class="feature-icon">
-                        <svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="3" y="3" width="18" height="18" rx="2"></rect>
-                            <path d="M3 9h18M9 21V9"></path>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2"/>
+                            <path d="M3 9h18M9 21V9"/>
                         </svg>
                     </div>
-                    <h4>Theatre tribunes</h4>
-                    <p>Two floors of convex and concave stands — unique in the region — designed to accommodate parishioners</p>
+                    <h4>Tribunes Théâtrales</h4>
+                    <p>Deux étages de tribunes convexes et concaves —unique dans la région— prévues pour accueillir les paroissiens</p>
                 </div>
-                <div class="feature-card ">
+                <divclass="feature-card ">
                     <div class="feature-icon">
-                        <svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <path d="M12 2a7 7 0 017 7"></path>
-                            <circle cx="12" cy="9" r="3"></circle>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 2a7 7 0 017 7"/>
+                            <circle cx="12" cy="9" r="3"/>
                         </svg>
                     </div>
-                    <h4>Theatre Printing</h4>
-                    <p>The richness of the decor is inspired by the decisions of the Counter-Reform — the Society of Jesus gave a great place to theatrical actions</p>
+                    <h4>Impression de Théâtre</h4>
+                    <p>La richesse du décor s'inspire des décisions de la Contre-Réforme — la Compagnie de Jésus accordait une grande place aux actions théâtrales</p>
                 </div>
-                <div class="feature-card ">
+                <divclass="feature-card ">
                     <div class="feature-icon">
-                        <svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
                         </svg>
                     </div>
-                    <h4>A Regional Exception</h4>
-                    <p>This decoration is unique throughout the South West — a successful marriage between local tradition and Roman influences</p>
+                    <h4>Une Exception Régionale</h4>
+                    <p>Cette décoration est unique dans tout le Sud-Ouest — un mariage réussi entre tradition locale et influences romaines</p>
                 </div>
             </div>
 
-            <div class="bulletin-gallery-section ">
-                <h3 class="gallery-title">Maps & Photographs of the Bulletin</h3>
-                <p class="gallery-subtitle">All figures published by Agnès Clouzet-Llorens in the Bulletin of the Tarn-et-Garonne Archaeological Society (1993)</p>
+            <divclass="bulletin-gallery-section ">
+                <h3 class="gallery-title">Planches & Photographies du Bulletin</h3>
+                <p class="gallery-subtitle">Toutes les figures publiées par Agnès Clouzet-Llorens dans le Bulletin de la Société archéologique de Tarn-et-Garonne (1993)</p>
                 <div class="gallery-grid">
                     <figure class="gallery-item">
-                        <a href="images/bulletin/plan_au_sol.jpg" data-lightbox="bulletin" data-title="Fig. 1 — Plan au sol (B. Voinchet, Monuments Historiques)">
-                            <img src="images/bulletin/plan_au_sol.jpg" alt="Plan au sol">
-                            <div class="gallery-caption">Fig. 1 — Ground plan</div>
+                        <a href="images/bulletin/plan_au_sol.jpg" data-lightbox="bulletin" data-title="Fig. 1 — Floor Plan (B. Voinchet, Monuments Historiques)">
+                            <img src="images/bulletin/plan_au_sol.jpg" alt="Floor Plan">
+                            <div class="gallery-caption">Fig. 1 — Floor Plan</div>
                         </a>
                     </figure>
                     <figure class="gallery-item">
                         <a href="images/bulletin/coupe_longitudinale.jpg" data-lightbox="bulletin" data-title="Fig. 2 — Coupe longitudinale">
                             <img src="images/bulletin/coupe_longitudinale.jpg" alt="Coupe longitudinale">
-                            <div class="gallery-caption">Fig. 2 — Longitudinal section</div>
+                            <div class="gallery-caption">Fig. 2 — Coupe longitudinale</div>
                         </a>
                     </figure>
                     <figure class="gallery-item">
                         <a href="images/bulletin/coupes_transversales.jpg" data-lightbox="bulletin" data-title="Fig. 3 — Coupes transversales">
                             <img src="images/bulletin/coupes_transversales.jpg" alt="Coupes transversales">
-                            <div class="gallery-caption">Fig. 3 — Cross sections</div>
+                            <div class="gallery-caption">Fig. 3 — Coupes transversales</div>
                         </a>
                     </figure>
                     <figure class="gallery-item">
                         <a href="images/bulletin/vue_interieure_1.jpg" data-lightbox="bulletin" data-title="Vue intérieure (1)">
                             <img src="images/bulletin/vue_interieure_1.jpg" alt="Vue intérieure 1">
-                            <div class="gallery-caption">Interior View — Article Start</div>
+                            <div class="gallery-caption">Vue intérieure — Début de l'article</div>
                         </a>
                     </figure>
                     <figure class="gallery-item">
                         <a href="images/bulletin/vue_interieure_2.jpg" data-lightbox="bulletin" data-title="Vue intérieure (2)">
                             <img src="images/bulletin/vue_interieure_2.jpg" alt="Vue intérieure 2">
-                            <div class="gallery-caption">Interior View — Architecture</div>
+                            <div class="gallery-caption">Vue intérieure — Architecture</div>
                         </a>
                     </figure>
                     <figure class="gallery-item">
                         <a href="images/bulletin/vue_interieure_3.jpg" data-lightbox="bulletin" data-title="Vue intérieure (3)">
                             <img src="images/bulletin/vue_interieure_3.jpg" alt="Vue intérieure 3">
-                            <div class="gallery-caption">Interior view — Tribunes</div>
+                            <div class="gallery-caption">Vue intérieure — Tribunes</div>
                         </a>
                     </figure>
                     <figure class="gallery-item">
                         <a href="images/bulletin/tribunes_et_chaire.jpg" data-lightbox="bulletin" data-title="Tribunes et chaire">
                             <img src="images/bulletin/tribunes_et_chaire.jpg" alt="Tribunes et chaire">
-                            <div class="gallery-caption">Tribune and rock chair</div>
+                            <div class="gallery-caption">Tribunes et chaire rocaille</div>
                         </a>
                     </figure>
                     <figure class="gallery-item">
                         <a href="images/bulletin/maitre_autel.jpg" data-lightbox="bulletin" data-title="Maître-autel">
                             <img src="images/bulletin/maitre_autel.jpg" alt="Maître-autel">
-                            <div class="gallery-caption">Baroque master altar</div>
+                            <div class="gallery-caption">Maître-autel baroque</div>
                         </a>
                     </figure>
                     <figure class="gallery-item">
                         <a href="images/bulletin/decoration_bois_dore.jpg" data-lightbox="bulletin" data-title="Décoration bois doré">
                             <img src="images/bulletin/decoration_bois_dore.jpg" alt="Décoration bois doré">
-                            <div class="gallery-caption">Decoration in golden wood</div>
+                            <div class="gallery-caption">Décoration en bois doré</div>
                         </a>
                     </figure>
                     <figure class="gallery-item">
                         <a href="images/bulletin/interieur_eglise_1.jpg" data-lightbox="bulletin" data-title="Intérieur (1)">
                             <img src="images/bulletin/interieur_eglise_1.jpg" alt="Intérieur église 1">
-                            <div class="gallery-caption">Interior — Classic Quadrilling</div>
+                            <div class="gallery-caption">Intérieur — Quadrillage classique</div>
                         </a>
                     </figure>
                     <figure class="gallery-item">
                         <a href="images/bulletin/interieur_eglise_2.jpg" data-lightbox="bulletin" data-title="Intérieur (2)">
                             <img src="images/bulletin/interieur_eglise_2.jpg" alt="Intérieur église 2">
-                            <div class="gallery-caption">Domestic — Ornament</div>
+                            <div class="gallery-caption">Intérieur — Ornementation</div>
                         </a>
                     </figure>
                     <figure class="gallery-item">
                         <a href="images/bulletin/interieur_eglise_3.jpg" data-lightbox="bulletin" data-title="Intérieur (3)">
                             <img src="images/bulletin/interieur_eglise_3.jpg" alt="Intérieur église 3">
-                            <div class="gallery-caption">Interior — The Goulards</div>
+                            <div class="gallery-caption">Intérieur — Les Goulard</div>
                         </a>
                     </figure>
                     <figure class="gallery-item">
                         <a href="images/bulletin/reliquaire.jpg" data-lightbox="bulletin" data-title="Reliquaire">
                             <img src="images/bulletin/reliquaire.jpg" alt="Reliquaire">
-                            <div class="gallery-caption">Reliquary of Saint-Prosper</div>
+                            <div class="gallery-caption">Reliquaire de Saint-Prosper</div>
                         </a>
                     </figure>
                     <figure class="gallery-item">
                         <a href="images/bulletin/mobilier_complet.jpg" data-lightbox="bulletin" data-title="Mobilier complet">
                             <img src="images/bulletin/mobilier_complet.jpg" alt="Mobilier complet">
-                            <div class="gallery-caption">Furniture — Stalles, lutrin</div>
+                            <div class="gallery-caption">Mobilier — Stalles, lutrin</div>
                         </a>
                     </figure>
                     <figure class="gallery-item">
                         <a href="images/bulletin/conclusion_et_source.jpg" data-lightbox="bulletin" data-title="Conclusion et sources">
                             <img src="images/bulletin/conclusion_et_source.jpg" alt="Conclusion et sources">
-                            <div class="gallery-caption">Conclusion & sources of the article</div>
+                            <div class="gallery-caption">Conclusion & sources de l'article</div>
                         </a>
                     </figure>
                 </div>
-                <p class="gallery-source">Agnès Clouzet-Llorens, "The parish and the church of Lachapelle in the eighteenth century",<em>Bulletin of the Archaeological Society of Tarn-et-Garonne</em>118, 1993, pp. 17-32. Reproduced with the kind permission of the Archaeological Society.</p>
+                <p class="gallery-source">Agnès Clouzet-Llorens, « La paroisse et l'église de Lachapelle au XVIIIe siècle », <em>Bulletin de la Société archéologique de Tarn-et-Garonne</em>, t. 118, 1993, pp. 17-32. Reproduit avec l'aimable autorisation de la Société archéologique.</p>
             </div>
         </div>
     </div>
