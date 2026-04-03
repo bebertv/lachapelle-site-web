@@ -1137,7 +1137,7 @@
             font-style: italic;
         }
 
-        /* Portrait spécial pour l'abbé Bruitte (taille originale) */
+        /* Portrait spécial pour l'abbé Bruitte (ratio naturel 800x1422) */
         .portrait-container.bruitte-portrait {
             width: 280px;
             margin: 1.5rem auto;
@@ -1149,13 +1149,17 @@
         .portrait-container.bruitte-portrait img {
             width: 250px;
             height: auto;
-            max-height: 400px;
+            aspect-ratio: 800 / 1422;
             object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            border: 3px solid var(--color-accent);
         }
 
         .portrait-container.bruitte-portrait p {
             min-height: 2.5rem;
         }
+
     </style>
 </head>
 <body>
