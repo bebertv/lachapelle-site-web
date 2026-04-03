@@ -1031,15 +1031,20 @@
 }
 
 .summary-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
-    justify-items: center;
+    padding: 0 1rem;
 }
 
 .summary-card {
+    flex: 1 1 300px;
+    max-width: 380px;
+    min-width: 280px;
     background: var(--color-white);
     border-radius: var(--radius-md);
     overflow: hidden;
