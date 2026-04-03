@@ -1140,11 +1140,17 @@
         /* Portrait spécial pour l'abbé Bruitte (taille originale) */
         .portrait-container.bruitte-portrait {
             width: 280px;
+            margin: 1.5rem auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .portrait-container.bruitte-portrait img {
             width: 250px;
-            height: 312px;
+            height: auto;
+            max-height: 400px;
+            object-fit: contain;
         }
 
         .portrait-container.bruitte-portrait p {
@@ -1239,8 +1245,8 @@
                 </aside>
                 
                 <div class="text-content" style="flex:1;">
-                    <h3>L'Abbé Edouard Bruitte</h3>
-                        <div class="portrait-container bruitte-portrait" style="margin:1.5rem 0;">
+                    <h3 style="text-align:center;">Abbé Edouard Bruitte</h3>
+                        <div class="portrait-container bruitte-portrait">
                         <img src="images/abbe-bruitte-portrait.jpg" alt="Portrait of Abbé Edouard Bruitte">
                         <p>Portrait reconstituted by AI (historical source: Archives départementales 82)</p>
                     </div>
