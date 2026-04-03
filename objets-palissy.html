@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objets mobiliers — Église Saint-Pierre de Lachapelle</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-bg: #faf8f5;
+            --color-bg-alt: #f0ebe3;
+            --color-primary: #8b6914;
+            --color-primary-dark: #6b4f0f;
+            --color-accent: #c9a227;
+            --color-text: #2c2416;
+            --color-text-light: #5a4d3a;
+            --color-white: #ffffff;
+            --shadow-sm: 0 2px 8px rgba(44, 36, 22, 0.08);
+            --shadow-md: 0 4px 20px rgba(44, 36, 22, 0.12);
+            --shadow-lg: 0 8px 40px rgba(44, 36, 22, 0.16);
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+        }
+
+        nav.scrolled {
+            background: rgba(250, 248, 245, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .nav-logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--color-text);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--color-accent);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Header */
+        .page-header {
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-bg-alt) 100%);
+            padding: 8rem 2rem 4rem;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            opacity: 0.1;
+            background-image: url('images/Lachapelle_-_Église_Saint-Pierre_-6.JPG');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .page-header-content {
+            text-align: center;
+            max-width: 900px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .page-header h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: var(--color-primary-dark);
+        }
+
+        .page-header p {
+            font-size: 1.2rem;
+            color: var(--color-text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 4rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* Filters */
+        .filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+
+        .filter-btn {
+            background: var(--color-white);
+            border: 2px solid var(--color-primary);
+            color: var(--color-primary);
+            padding: 0.6rem 1.5rem;
+            border-radius: 50px;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--color-primary);
+            color: var(--color-white);
+        }
+
+        /* Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .gallery-card {
+            background: var(--color-white);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .gallery-card-image {
+            width: 100%;
+            aspect-ratio: 4/3;
+            overflow: hidden;
+            background: var(--color-bg-alt);
+        }
+
+        .gallery-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .gallery-card:hover .gallery-card-image img {
+            transform: scale(1.05);
+        }
+
+        .gallery-card-content {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .gallery-card-ref {
+            display: inline-block;
+            font-family: 'Outfit', monospace;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            background: var(--color-bg-alt);
+            padding: 0.3rem 0.7rem;
+            border-radius: 4px;
+            margin-bottom: 0.75rem;
+        }
+
+        .gallery-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--color-text);
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+
+        .gallery-card-category {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.85rem;
+            color: var(--color-text-light);
+            margin-bottom: 1rem;
+        }
+
+        .gallery-card-category::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: var(--color-accent);
+            border-radius: 50%;
+        }
+
+        .gallery-card-footer {
+            margin-top: auto;
+            padding-top: 1rem;
+            border-top: 1px solid var(--color-bg-alt);
+        }
+
+        .gallery-card-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--color-primary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .gallery-card-link:hover {
+            color: var(--color-primary-dark);
+            gap: 0.8rem;
+        }
+
+        .gallery-card-link svg {
+            width: 16px;
+            height: 16px;
+            transition: var(--transition);
+        }
+
+        /* Source section */
+        .source-section {
+            margin-top: 4rem;
+            padding: 2rem;
+            background: var(--color-bg-alt);
+            border-radius: var(--radius-md);
+            text-align: center;
+        }
+        
+        .source-section h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            color: var(--color-primary-dark);
+            margin-bottom: 1rem;
+        }
+        
+        .source-section p {
+            color: var(--color-text-light);
+            margin-bottom: 1rem;
+        }
+        
+        .source-section a {
+            color: var(--color-primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .source-section a:hover {
+            text-decoration: underline;
+        }
+
+        /* Back button */
+        .back-section {
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .btn-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--color-primary);
+            color: var(--color-white);
+            text-decoration: none;
+            padding: 0.9rem 2rem;
+            border-radius: 50px;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .btn-back:hover {
+            background: var(--color-primary-dark);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--color-bg-alt);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        footer p {
+            color: var(--color-text-light);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .page-header {
+                padding: 6rem 1.5rem 3rem;
+            }
+
+            .main-content {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body data-pid="objets-palissy">
+    <!-- Navigation -->
+    <nav id="nav">
+        <a href="index.html" class="nav-logo">
+            <img src="images/logo-eglise.png" alt="Logo Église Saint-Pierre" class="nav-logo-img">
+            Saint-Pierre de Lachapelle
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="histoire.html">Histoire</a></li>
+            <li><a href="decor.html">Décors</a></li>
+            <li><a href="visite.html">Visite</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header class="page-header">
+        <div class="page-header-content">
+            <h1>Objets mobiliers</h1>
+            <p>Patrimoine mobilier de l'église Saint-Pierre classé dans la base Palissy — Base du patrimoine mobilier du Ministère de la Culture</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Filters -->
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">Tous</button>
+            <button class="filter-btn" data-filter="Décor">Décor</button>
+            <button class="filter-btn" data-filter="Menuiserie">Menuiserie</button>
+            <button class="filter-btn" data-filter="Mobilier">Mobilier</button>
+            <button class="filter-btn" data-filter="Orfèvrerie">Orfèvrerie</button>
+            <button class="filter-btn" data-filter="Sculpture">Sculpture</button>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="gallery-grid">
+            <!-- Décor -->
+            <article class="gallery-card" data-category="Décor">
+                <div class="gallery-card-image">
+                    <img src="https://popcorn-prd-perf-assets.s3.gra.io.cloud.ovh.net/memoire/AP80L076991/80l076991.jpg" alt="Lambris de revêtement" loading="lazy">
+                </div>
+                <div class="gallery-card-content">
+                    <span class="gallery-card-ref">PM82000068 / IM82001694</span>
+                    <h3>Décor intérieur Louis XV : lambris, 3 autels, 3 retables, tabernacle, chaire, tribunes, tableaux</h3>
+                    <span class="gallery-card-category">Décor</span>
+                    <div class="gallery-card-footer">
+                        <a href="https://pop.culture.gouv.fr/notice/palissy/PM82000068" target="_blank" rel="noopener" class="gallery-card-link">
+                            Voir PM82000068 sur POP
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
+                            </svg>
+                        </a>
+                        <a href="https://pop.culture.gouv.fr/notice/palissy/IM82001694" target="_blank" rel="noopener" class="gallery-card-link" style="margin-left: 1rem;">
+                            Voir IM82001694 sur POP
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Menuiserie (2 objets) -->
+            <article class="gallery-card" data-category="Menuiserie">
+                <div class="gallery-card-image">
+                    <img src="https://popcorn-prd-perf-assets.s3.gra.io.cloud.ovh.net/memoire/AP80L077003/80l077003.jpg" alt="Stalles" loading="lazy">
+                </div>
+                <div class="gallery-card-content">
+                    <span class="gallery-card-ref">IM82001691 / PM82000070</span>
+                    <h3>Stalles (6)</h3>
+                    <span class="gallery-card-category">Menuiserie</span>
+                    <div class="gallery-card-footer">
+                        <a href="https://pop.culture.gouv.fr/notice/palissy/IM82001691" target="_blank" rel="noopener" class="gallery-card-link">
+                            Voir IM82001691 sur POP
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
+                            </svg>
+                        </a>
+                        <a href="https://pop.culture.gouv.fr/notice/palissy/PM82000070" target="_blank" rel="noopener" class="gallery-card-link" style="margin-left: 1rem;">
+                            Voir PM82000070 sur POP
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="gallery-card" data-category="Menuiserie">
+                <div class="gallery-card-image">
+                    <img src="https://popcorn-prd-perf-assets.s3.gra.io.cloud.ovh.net/memoire/AP80L077005/80l077005.jpg" alt="Lutrin" loading="lazy">
+                </div>
+                <div class="gallery-card-content">
+                    <span class="gallery-card-ref">IM82001692 / PM82000069</span>
+                    <h3>Lutrin</h3>
+                    <span class="gallery-card-category">Menuiserie</span>
+                    <div class="gallery-card-footer">
+                        <a href="https://pop.culture.gouv.fr/notice/palissy/IM82001692" target="_blank" rel="noopener" class="gallery-card-link">
+                            Voir IM82001692 sur POP
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
+                            </svg>
+                        </a>
+                        <a href="https://pop.culture.gouv.fr/notice/palissy/PM82000069" target="_blank" rel="noopener" class="gallery-card-link" style="margin-left: 1rem;">
+                            Voir PM82000069 sur POP
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Mobilier -->
+            <article class="gallery-card" data-category="Mobilier">
+                <div class="gallery-card-image">
+                    <img src="https://popcorn-prd-perf-assets.s3.gra.io.cloud.ovh.net/memoire/IVR73_20098213350NUCA/IVR73_20098213350NUCA_P.jpg" alt="Le mobilier de l'église" loading="lazy">
+                </div>
+                <div class="gallery-card-content">
+                    <span class="gallery-card-ref">IM82001689</span>
+                    <h3>Le mobilier de l'église paroissiale Saint-Pierre</h3>
+                    <span class="gallery-card-category">Mobilier</span>
+                    <div class="gallery-card-footer">
+                        <a href="https://pop.culture.gouv.fr/notice/palissy/IM82001689" target="_blank" rel="noopener" class="gallery-card-link">
+                            Voir sur POP
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Orfèvrerie (5 objets) -->
+            <article class="gallery-card" data-category="Orfèvrerie">
+                <div class="gallery-card-image">
+                    <img src="https://popcorn-prd-perf-assets.s3.gra.io.cloud.ovh.net/memoire/IVR73_19788200231V/IVR73_19788200231V_P.jpg" alt="Encensoir" loading="lazy">
+                </div>
+                <div class="gallery-card-content">
+                    <span class="gallery-card-ref">IM82001690</span>
+                    <h3>Encensoir</h3>
+                    <span class="gallery-card-category">Orfèvrerie</span>
+                    <div class="gallery-card-footer">
+                        <a href="https://pop.culture.gouv.fr/notice/palissy/IM82001690" target="_blank" rel="noopener" class="gallery-card-link">
+                            Voir sur POP
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="gallery-card" data-category="Orfèvrerie">
+                <div class="gallery-card-image">
+                    <img src="https://popcorn-prd-perf-assets.s3.gra.io.cloud.ovh.net/memoire/IVR73_19688200254X/IVR73_19688200254X_P.jpg" alt="Chandeliers d'autel et croix d'autel, style Louis XV" loading="lazy">
+                </div>
+                <div class="gallery-card-content">
+                    <span class="gallery-card-ref">IM82001693</span>
+                    <h3>Chandeliers d'autel (6), croix d'autel — style Louis XV</h3>
+                    <span class="gallery-card-category">Orfèvrerie</span>
+                    <div class="gallery-card-footer">
+                        <a href="https://pop.culture.gouv.fr/notice/palissy/IM82001693" target="_blank" rel="noopener" class="gallery-card-link">
+                            Voir sur POP
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="gallery-card" data-category="Orfèvrerie">
+                <div class="gallery-card-image">
+                    <img src="https://popcorn-prd-perf-assets.s3.gra.io.cloud.ovh.net/memoire/IVR73_19688200253X/IVR73_19688200253X_P.jpg" alt="Chandeliers d'autel, style Louis XIV" loading="lazy">
+                </div>
+                <div class="gallery-card-content">
+                    <span class="gallery-card-ref">IM82001696</span>
+                    <h3>Chandeliers d'autel (8) — style Louis XIV</h3>
+                    <span class="gallery-card-category">Orfèvrerie</span>
+                    <div class="gallery-card-footer">
+                        <a href="https://pop.culture.gouv.fr/notice/palissy/IM82001696" target="_blank" rel="noopener" class="gallery-card-link">
+                            Voir sur POP
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="gallery-card" data-category="Orfèvrerie">
+                <div class="gallery-card-image">
+                    <img src="https://popcorn-prd-perf-assets.s3.gra.io.cloud.ovh.net/memoire/IVR73_19788200233V/IVR73_19788200233V_P.jpg" alt="Thabor du maître-autel" loading="lazy">
+                </div>
+                <div class="gallery-card-content">
+                    <span class="gallery-card-ref">IM82001700</span>
+                    <h3>Thabor, du maître-autel</h3>
+                    <span class="gallery-card-category">Orfèvrerie</span>
+                    <div class="gallery-card-footer">
+                        <a href="https://pop.culture.gouv.fr/notice/palissy/IM82001700" target="_blank" rel="noopener" class="gallery-card-link">
+                            Voir sur POP
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="gallery-card" data-category="Orfèvrerie">
+                <div class="gallery-card-image">
+                    <img src="https://popcorn-prd-perf-assets.s3.gra.io.cloud.ovh.net/memoire/IVR73_19788200229V/IVR73_19788200229V_P.jpg" alt="Canons d'autel" loading="lazy">
+                </div>
+                <div class="gallery-card-content">
+                    <span class="gallery-card-ref">IM82001704</span>
+                    <h3>Canons d'autel</h3>
+                    <span class="gallery-card-category">Orfèvrerie</span>
+                    <div class="gallery-card-footer">
+                        <a href="https://pop.culture.gouv.fr/notice/palissy/IM82001704" target="_blank" rel="noopener" class="gallery-card-link">
+                            Voir sur POP
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Sculpture (2 objets) -->
+            <article class="gallery-card" data-category="Sculpture">
+                <div class="gallery-card-image">
+                    <img src="https://popcorn-prd-perf-assets.s3.gra.io.cloud.ovh.net/memoire/AP80L076998/80l076998.jpg" alt="Statue de sainte Quitterie" loading="lazy">
+                </div>
+                <div class="gallery-card-content">
+                    <span class="gallery-card-ref">IM82001697 / PM82000071</span>
+                    <h3>Statue : sainte Quitterie</h3>
+                    <span class="gallery-card-category">Sculpture</span>
+                    <div class="gallery-card-footer">
+                        <a href="https://pop.culture.gouv.fr/notice/palissy/IM82001697" target="_blank" rel="noopener" class="gallery-card-link">
+                            Voir IM82001697 sur POP
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
+                            </svg>
+                        </a>
+                        <a href="https://pop.culture.gouv.fr/notice/palissy/PM82000071" target="_blank" rel="noopener" class="gallery-card-link" style="margin-left: 1rem;">
+                            Voir PM82000071 sur POP
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="gallery-card" data-category="Sculpture">
+                <div class="gallery-card-image">
+                    <img src="https://popcorn-prd-perf-assets.s3.gra.io.cloud.ovh.net/memoire/IVR73_19688200249X/IVR73_19688200249X_P.jpg" alt="Statue de la Vierge à l'Enfant" loading="lazy">
+                </div>
+                <div class="gallery-card-content">
+                    <span class="gallery-card-ref">IM82001698</span>
+                    <h3>Statue : Vierge à l'Enfant</h3>
+                    <span class="gallery-card-category">Sculpture</span>
+                    <div class="gallery-card-footer">
+                        <a href="https://pop.culture.gouv.fr/notice/palissy/IM82001698" target="_blank" rel="noopener" class="gallery-card-link">
+                            Voir sur POP
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <!-- Source Section -->
+        <div class="source-section">
+            <h2>Source des données</h2>
+            <p>Les informations et images présentées sur cette page proviennent de la base <strong>Palissy</strong>, base de données du patrimoine mobilier français du Ministère de la Culture.</p>
+            <p>Plateforme Ouverte du Patrimoine (POP) : <a href="https://pop.culture.gouv.fr" target="_blank" rel="noopener">pop.culture.gouv.fr</a></p>
+        </div>
+
+        <!-- Back Section -->
+        <div class="back-section">
+            <a href="index.html" class="btn-back">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Retour à l'accueil
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--color-primary);margin-bottom:1rem;">Église Saint-Pierre de Lachapelle</div>
+        <div style="display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;margin:1.5rem 0;">
+            <a href="https://www.lachapelle82.fr" target="_blank" rel="noopener" style="color:var(--color-text-light);text-decoration:none;">lachapelle82.fr</a>
+            <a href="https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Pierre_de_Lachapelle" target="_blank" rel="noopener" style="color:var(--color-text-light);text-decoration:none;">Wikipédia</a>
+            <a href="https://www.tourisme-tarnetgaronne.fr" target="_blank" rel="noopener" style="color:var(--color-text-light);text-decoration:none;">Tourisme 82</a>
+            <a href="https://www.facebook.com/751562061715171" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:0.4rem;color:var(--color-text-light);text-decoration:none;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>Facebook</a>
+            <a href="https://www.instagram.com/lesamisdelachapelle82/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:0.4rem;color:var(--color-text-light);text-decoration:none;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>Instagram</a>
+        </div>
+        <p style="opacity:0.8;">Patrimoine baroque en Pays de Serres — Association des Amis de l'Église de Lachapelle</p>
+    </footer>
+
+    <script>
+        // Navigation scroll effect
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Filter functionality
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const galleryCards = document.querySelectorAll('.gallery-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active button
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.getAttribute('data-filter');
+
+                // Filter cards
+                galleryCards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'flex';
+                        card.style.animation = 'fadeInUp 0.5s ease-out';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

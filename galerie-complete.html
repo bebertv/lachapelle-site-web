@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🖼️ Galerie - 51 images</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            background: linear-gradient(135deg, #faf8f5 0%, #f0ebe3 100%);
+            padding: 2rem 1rem;
+            color: #2c2416;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 0.5rem;
+            color: #8b6914;
+            font-size: 2.5rem;
+        }
+        .subtitle {
+            text-align: center;
+            color: #5a4d3a;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        .counts {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+        }
+        .counts span {
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            margin: 0 0.3rem;
+            font-weight: 500;
+        }
+        .local-badge { background: #d4edda; color: #155724; }
+        .wiki-badge { background: #cce5ff; color: #004085; }
+        .section {
+            max-width: 1600px;
+            margin: 0 auto 3rem;
+        }
+        .section-title {
+            font-size: 1.5rem;
+            color: #6b4f0f;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #c9a227;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 2rem;
+        }
+        .image-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(44, 36, 22, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .image-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(44, 36, 22, 0.18);
+        }
+        .image-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+            background: #e8e4dc;
+        }
+        .image-info {
+            padding: 1.2rem;
+            border-top: 1px solid #f0ebe3;
+        }
+        .filename {
+            font-family: 'Courier New', monospace;
+            font-size: 0.8rem;
+            color: #2c2416;
+            word-break: break-all;
+            margin-bottom: 0.3rem;
+            line-height: 1.4;
+        }
+        .filesize {
+            font-size: 0.75rem;
+            color: #8b6914;
+            font-weight: 500;
+        }
+        .desc {
+            font-size: 0.9rem;
+            color: #5a4d3a;
+            margin-top: 0.5rem;
+        }
+        .source-tag {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .tag-local { background: #28a745; color: white; }
+        .tag-wiki { background: #007bff; color: white; }
+        .wiki-placeholder {
+            height: 180px;
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #1976d2;
+            text-align: center;
+            padding: 1rem;
+        }
+        .wiki-placeholder .icon {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+        .wiki-placeholder .text {
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        .wiki-link {
+            display: inline-block;
+            margin-top: 0.8rem;
+            padding: 0.5rem 1rem;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        .wiki-link:hover { background: #0056b3; }
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            padding: 2rem;
+            color: #8b6914;
+            font-size: 0.9rem;
+        }
+        footer a {
+            display: inline-block;
+            margin: 0.5rem;
+            padding: 0.6rem 1.2rem;
+            background: #8b6914;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+        footer a:hover { background: #6b4f0f; }
+    </style>
+</head>
+<body>
+    <h1>🖼️ Galerie d'images</h1>
+    <p class="subtitle">51 images disponibles pour le site Église de Lachapelle</p>
+    <div class="counts">
+        <span class="local-badge">📁 Locales: 28</span>
+        <span class="wiki-badge">🌐 Wikimedia Commons: 23</span>
+    </div>
+    
+    <div class="section">
+        <h2 class="section-title">📁 Images locales (déjà sur le serveur)</h2>
+        <div class="gallery">
+            
+            <div class="image-card">
+                <span class="source-tag tag-local">LOCAL</span>
+                <a href="images/Lachapelle.jpg" target="_blank">
+                    <img src="images/Lachapelle.jpg" alt="Lachapelle.jpg" loading="lazy">
+                </a>
+                <div class="image-info">
+                    <div class="filename">Lachapelle.jpg</div>
+                    <div class="filesize">173 KB</div>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <span class="source-tag tag-local">LOCAL</span>
+                <a href="images/Lachapelle_-_Église_Saint-Pierre_-1.JPG" target="_blank">
+                    <img src="images/Lachapelle_-_Église_Saint-Pierre_-1.JPG" alt="Lachapelle_-_Église_Saint-Pierre_-1.JPG" loading="lazy">
+                </a>
+                <div class="image-info">
+                    <div class="filename">Lachapelle_-_Église_Saint-Pierre_-1.JPG</div>
+                    <div class="filesize">270 KB</div>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <span class="source-tag tag-local">LOCAL</span>
+                <a href="images/Lachapelle_-_Église_Saint-Pierre_-2.JPG" target="_blank">
+                    <img src="images/Lachapelle_-_Église_Saint-Pierre_-2.JPG" alt="Lachapelle_-_Église_Saint-Pierre_-2.JPG" loading="lazy">
+                </a>
+                <div class="image-info">
+                    <div class="filename">Lachapelle_-_Église_Saint-Pierre_-2.JPG</div>
+                    <div class="filesize">359 KB</div>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <span class="source-tag tag-local">LOCAL</span>
+                <a href="images/Lachapelle_-_Église_Saint-Pierre_-4.JPG" target="_blank">
+                    <img src="images/Lachapelle_-_Église_Saint-Pierre_-4.JPG" alt="Lachapelle_-_Église_Saint-Pierre_-4.JPG" loading="lazy">
+                </a>
+                <div class="image-info">
+                    <div class="filename">Lachapelle_-_Église_Saint-Pierre_-4.JPG</div>
+                    <div class="filesize">233 KB</div>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <span class="source-tag tag-local">LOCAL</span>
+                <a href="images/Lachapelle_-_Église_Saint-Pierre_-6.JPG" target="_blank">
+                    <img src="images/Lachapelle_-_Église_Saint-Pierre_-6.JPG" alt="Lachapelle_-_Église_Saint-Pierre_-6.JPG" loading="lazy">
+                </a>
+                <div class="image-info">
+                    <div class="filename">Lachapelle_-_Église_Saint-Pierre_-6.JPG</div>
+                    <div class="filesize">263 KB</div>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <span class="source-tag tag-local">LOCAL</span>
+                <a href="images/Lachapelle_-_Église_Saint-Pierre_-7.JPG" target="_blank">
+                    <img src="images/Lachapelle_-_Église_Saint-Pierre_-7.JPG" alt="Lachapelle_-_Église_Saint-Pierre_-7.JPG" loading="lazy">
+                </a>
+                <div class="image-info">
+                    <div class="filename">Lachapelle_-_Église_Saint-Pierre_-7.JPG</div>
+                    <div class="filesize">255 KB</div>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <span class="source-tag tag-local">LOCAL</span>
+                <a href="images/Lachapelle_2021_01_-_Chateau.jpg" target="_blank">
+                    <img src="images/Lachapelle_2021_01_-_Chateau.jpg" alt="Lachapelle_2021_01_-_Chateau.jpg" loading="lazy">
+                </a>
+                <div class="image-info">
+                    <div class="filename">Lachapelle_2021_01_-_Chateau.jpg</div>
+                    <div class="filesize">170 KB</div>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <span class="source-tag tag-local">LOCAL</span>
+                <a href="images/Lachapelle_2021_02_-_Mairie_et_statue.jpg" target="_blank">
+                    <img src="images/Lachapelle_2021_02_-_Mairie_et_statue.jpg" alt="Lachapelle_2021_02_-_Mairie_et_statue.jpg" loading="lazy">
+                </a>
+                <div class="image-info">
+                    <div class="filename">Lachapelle_2021_02_-_Mairie_et_statue.jpg</div>
+                    <div class="filesize">327 KB</div>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <span class="source-tag tag-local">LOCAL</span>
+                <a href="images/Lachapelle_2021_03_-_Maison.jpg" target="_blank">
+                    <img src="images/Lachapelle_2021_03_-_Maison.jpg" alt="Lachapelle_2021_03_-_Maison.jpg" loading="lazy">
+                </a>
+                <div class="image-info">
+                    <div class="filename">Lachapelle_2021_03_-_Maison.jpg</div>
+                    <div class="filesize">178 KB</div>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <span class="source-tag tag-local">LOCAL</span>
+                <a href="images/Lachapelle_2021_04_-_MAM.jpg" target="_blank">
+                    <img src="images/Lachapelle_2021_04_-_MAM.jpg" alt="Lachapelle_2021_04_-_MAM.jpg" loading="lazy">
+                </a>
+                <div class="image-info">
+                    <div class="filename">Lachapelle_2021_04_-_MAM.jpg</div>
+                    <div class="filesize">185 KB</div>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <span class="source-tag tag-local">LOCAL</span>
+                <a href="images/Lachapelle_2021_06_-_Point_de_vue.jpg" target="_blank">
+                    <img src="images/Lachapelle_2021_06_-_Point_de_vue.jpg" alt="Lachapelle_2021_06_-_Point_de_vue.jpg" loading="lazy">
+                </a>
+                <div class="image-info">
+                    <div class="filename">Lachapelle_2021_06_-_Point_de_vue.jpg</div>
+                    <div class="filesize">146 KB</div>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <span class="source-tag tag-local">LOCAL</span>
+                <a href="images/Lachapelle_2021_07_-_Chateau_facade_nord.jpg" target="_blank">
+                    <img src="images/Lachapelle_2021_07_-_Chateau_facade_nord.jpg" alt="Lachapelle_2021_07_-_Chateau_facade_nord.jpg" loading="lazy">
+                </a>
+                <div class="image-info">
+                    <div class="filename">Lachapelle_2021_07_-_Chateau_facade_nord.jpg</div>
+                    <div class="filesize">457 KB</div>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <span class="source-tag tag-local">LOCAL</span>
+                <a href="images/abbe-bruitte-portrait.jpg" target="_blank">
+                    <img src="images/abbe-bruitte-portrait.jpg" alt="abbe-bruitte-portrait.jpg" loading="lazy">
+                </a>
+                <div class="image-info">
+                    <div class="filename">abbe-bruitte-portrait.jpg</div>
+                    <div class="filesize">167 KB</div>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <span class="source-tag tag-local">LOCAL</span>
+                <a href="images/abbe-bruitte-portrait.png" target="_blank">
+                    <img src="images/abbe-bruitte-portrait.png" alt="abbe-bruitte-portrait.png" loading="lazy">
+                </a>
+                <div class="image-info">
+                    <div class="filename">abbe-bruitte-portrait.png</div>
+                    <div class="filesize">3162 KB</div>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <span class="source-tag tag-local">LOCAL</span>
+                <a href="images/diocese-montauban-1885.jpg" target="_blank">
+                    <img src="images/diocese-montauban-1885.jpg" alt="diocese-montauban-1885.jpg" loading="lazy">
+                </a>
+                <div class="image-info">
+                    <div class="filename">diocese-montauban-1885.jpg</div>
+                    <div class="filesize">168 KB</div>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <span class="source-tag tag-local">LOCAL</span>
+                <a href="images/mgr-chaudru-armoiries.jpeg" target="_blank">
+                    <img src="images/mgr-chaudru-armoiries.jpeg" alt="mgr-chaudru-armoiries.jpeg" loading="lazy">
+                </a>
+                <div class="image-info">
+                    <div class="filename">mgr-chaudru-armoiries.jpeg</div>
+                    <div class="filesize">27 KB</div>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <span class="source-tag tag-local">LOCAL</span>
+                <a href="images/mgr-chaudru-portrait.jpeg" target="_blank">
+                    <img src="images/mgr-chaudru-portrait.jpeg" alt="mgr-chaudru-portrait.jpeg" loading="lazy">
+                </a>
+                <div class="image-info">
+                    <div class="filename">mgr-chaudru-portrait.jpeg</div>
+                    <div class="filesize">9 KB</div>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <span class="source-tag tag-local">LOCAL</span>
+                <a href="images/mgr-doney-alt.jpeg" target="_blank">
+                    <img src="images/mgr-doney-alt.jpeg" alt="mgr-doney-alt.jpeg" loading="lazy">
+                </a>
+                <div class="image-info">
+                    <div class="filename">mgr-doney-alt.jpeg</div>
+                    <div class="filesize">7 KB</div>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <span class="source-tag tag-local">LOCAL</span>
+                <a href="images/mgr-doney-armoiries.jpeg" target="_blank">
+                    <img src="images/mgr-doney-armoiries.jpeg" alt="mgr-doney-armoiries.jpeg" loading="lazy">
+                </a>
+                <div class="image-info">
+                    <div class="filename">mgr-doney-armoiries.jpeg</div>
+                    <div class="filesize">21 KB</div>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <span class="source-tag tag-local">LOCAL</span>
+                <a href="images/pretre-querelle-1840.png" target="_blank">
+                    <img src="images/pretre-querelle-1840.png" alt="pretre-querelle-1840.png" loading="lazy">
+                </a>
+                <div class="image-info">
+                    <div class="filename">pretre-querelle-1840.png</div>
+                    <div class="filesize">3637 KB</div>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <span class="source-tag tag-local">LOCAL</span>
+                <a href="images/pretre-refractaire-1843.jpg" target="_blank">
+                    <img src="images/pretre-refractaire-1843.jpg" alt="pretre-refractaire-1843.jpg" loading="lazy">
+                </a>
+                <div class="image-info">
+                    <div class="filename">pretre-refractaire-1843.jpg</div>
+                    <div class="filesize">0 KB</div>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <span class="source-tag tag-local">LOCAL</span>
+                <a href="images/Église_de_Lachapelle_2021_03_-_Lutrin.jpg" target="_blank">
+                    <img src="images/Église_de_Lachapelle_2021_03_-_Lutrin.jpg" alt="Église_de_Lachapelle_2021_03_-_Lutrin.jpg" loading="lazy">
+                </a>
+                <div class="image-info">
+                    <div class="filename">Église_de_Lachapelle_2021_03_-_Lutrin.jpg</div>
+                    <div class="filesize">220 KB</div>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <span class="source-tag tag-local">LOCAL</span>
+                <a href="images/Église_de_Lachapelle_2021_05_-_Chaire.jpg" target="_blank">
+                    <img src="images/Église_de_Lachapelle_2021_05_-_Chaire.jpg" alt="Église_de_Lachapelle_2021_05_-_Chaire.jpg" loading="lazy">
+                </a>
+                <div class="image-info">
+                    <div class="filename">Église_de_Lachapelle_2021_05_-_Chaire.jpg</div>
+                    <div class="filesize">289 KB</div>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <span class="source-tag tag-local">LOCAL</span>
+                <a href="images/Église_de_Lachapelle_2021_07_-_Statues.jpg" target="_blank">
+                    <img src="images/Église_de_Lachapelle_2021_07_-_Statues.jpg" alt="Église_de_Lachapelle_2021_07_-_Statues.jpg" loading="lazy">
+                </a>
+                <div class="image-info">
+                    <div class="filename">Église_de_Lachapelle_2021_07_-_Statues.jpg</div>
+                    <div class="filesize">114 KB</div>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <span class="source-tag tag-local">LOCAL</span>
+                <a href="images/Église_de_Lachapelle_2021_08_-_Harmonium.jpg" target="_blank">
+                    <img src="images/Église_de_Lachapelle_2021_08_-_Harmonium.jpg" alt="Église_de_Lachapelle_2021_08_-_Harmonium.jpg" loading="lazy">
+                </a>
+                <div class="image-info">
+                    <div class="filename">Église_de_Lachapelle_2021_08_-_Harmonium.jpg</div>
+                    <div class="filesize">145 KB</div>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <span class="source-tag tag-local">LOCAL</span>
+                <a href="images/Église_de_Lachapelle_2021_09_-_Vitrail.jpg" target="_blank">
+                    <img src="images/Église_de_Lachapelle_2021_09_-_Vitrail.jpg" alt="Église_de_Lachapelle_2021_09_-_Vitrail.jpg" loading="lazy">
+                </a>
+                <div class="image-info">
+                    <div class="filename">Église_de_Lachapelle_2021_09_-_Vitrail.jpg</div>
+                    <div class="filesize">407 KB</div>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <span class="source-tag tag-local">LOCAL</span>
+                <a href="images/Église_de_Lachapelle_2021_13_-_Creche.jpg" target="_blank">
+                    <img src="images/Église_de_Lachapelle_2021_13_-_Creche.jpg" alt="Église_de_Lachapelle_2021_13_-_Creche.jpg" loading="lazy">
+                </a>
+                <div class="image-info">
+                    <div class="filename">Église_de_Lachapelle_2021_13_-_Creche.jpg</div>
+                    <div class="filesize">225 KB</div>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <span class="source-tag tag-local">LOCAL</span>
+                <a href="images/Église_de_Lachapelle_2021_15_-_Portail.jpg" target="_blank">
+                    <img src="images/Église_de_Lachapelle_2021_15_-_Portail.jpg" alt="Église_de_Lachapelle_2021_15_-_Portail.jpg" loading="lazy">
+                </a>
+                <div class="image-info">
+                    <div class="filename">Église_de_Lachapelle_2021_15_-_Portail.jpg</div>
+                    <div class="filesize">296 KB</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2 class="section-title">🌐 Wikimedia Commons (cliquez pour voir/télécharger)</h2>
+        <div class="gallery">
+            
+            <div class="image-card">
+                <span class="source-tag tag-wiki">COMMONS</span>
+                <div class="wiki-placeholder">
+                    <span class="icon">🖼️</span>
+                    <span class="text">Façade église</span>
+                </div>
+                <div class="image-info">
+                    <div class="filename">Lachapelle - Église Saint-Pierre -1</div>
+                    <div class="desc">Source: Wikimedia Commons</div>
+                    <a href="https://commons.wikimedia.org/wiki/File:Lachapelle_-_Église_Saint-Pierre_-1.JPG" target="_blank" class="wiki-link">🔗 Voir sur Commons</a>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <span class="source-tag tag-wiki">COMMONS</span>
+                <div class="wiki-placeholder">
+                    <span class="icon">🖼️</span>
+                    <span class="text">Clocher</span>
+                </div>
+                <div class="image-info">
+                    <div class="filename">Lachapelle - Église Saint-Pierre -2</div>
+                    <div class="desc">Source: Wikimedia Commons</div>
+                    <a href="https://commons.wikimedia.org/wiki/File:Lachapelle_-_Église_Saint-Pierre_-2.JPG" target="_blank" class="wiki-link">🔗 Voir sur Commons</a>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <span class="source-tag tag-wiki">COMMONS</span>
+                <div class="wiki-placeholder">
+                    <span class="icon">🖼️</span>
+                    <span class="text">Portail</span>
+                </div>
+                <div class="image-info">
+                    <div class="filename">Lachapelle - Église Saint-Pierre -4</div>
+                    <div class="desc">Source: Wikimedia Commons</div>
+                    <a href="https://commons.wikimedia.org/wiki/File:Lachapelle_-_Église_Saint-Pierre_-4.JPG" target="_blank" class="wiki-link">🔗 Voir sur Commons</a>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <span class="source-tag tag-wiki">COMMONS</span>
+                <div class="wiki-placeholder">
+                    <span class="icon">🖼️</span>
+                    <span class="text">Extérieur</span>
+                </div>
+                <div class="image-info">
+                    <div class="filename">Lachapelle - Église Saint-Pierre -6</div>
+                    <div class="desc">Source: Wikimedia Commons</div>
+                    <a href="https://commons.wikimedia.org/wiki/File:Lachapelle_-_Église_Saint-Pierre_-6.JPG" target="_blank" class="wiki-link">🔗 Voir sur Commons</a>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <span class="source-tag tag-wiki">COMMONS</span>
+                <div class="wiki-placeholder">
+                    <span class="icon">🖼️</span>
+                    <span class="text">Vue d'ensemble</span>
+                </div>
+                <div class="image-info">
+                    <div class="filename">Lachapelle - Église Saint-Pierre -7</div>
+                    <div class="desc">Source: Wikimedia Commons</div>
+                    <a href="https://commons.wikimedia.org/wiki/File:Lachapelle_-_Église_Saint-Pierre_-7.JPG" target="_blank" class="wiki-link">🔗 Voir sur Commons</a>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <span class="source-tag tag-wiki">COMMONS</span>
+                <div class="wiki-placeholder">
+                    <span class="icon">🖼️</span>
+                    <span class="text">Extérieur</span>
+                </div>
+                <div class="image-info">
+                    <div class="filename">Lachapelle-Saint-Pierre église 1</div>
+                    <div class="desc">Source: Wikimedia Commons</div>
+                    <a href="https://commons.wikimedia.org/wiki/File:Lachapelle-Saint-Pierre_église_1.JPG" target="_blank" class="wiki-link">🔗 Voir sur Commons</a>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <span class="source-tag tag-wiki">COMMONS</span>
+                <div class="wiki-placeholder">
+                    <span class="icon">🖼️</span>
+                    <span class="text">Angle église</span>
+                </div>
+                <div class="image-info">
+                    <div class="filename">Lachapelle-Saint-Pierre église 2</div>
+                    <div class="desc">Source: Wikimedia Commons</div>
+                    <a href="https://commons.wikimedia.org/wiki/File:Lachapelle-Saint-Pierre_église_2.JPG" target="_blank" class="wiki-link">🔗 Voir sur Commons</a>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <span class="source-tag tag-wiki">COMMONS</span>
+                <div class="wiki-placeholder">
+                    <span class="icon">🖼️</span>
+                    <span class="text">Chœur</span>
+                </div>
+                <div class="image-info">
+                    <div class="filename">Église 2021-01 - Chœur et autel</div>
+                    <div class="desc">Source: Wikimedia Commons</div>
+                    <a href="https://commons.wikimedia.org/wiki/File:Église_de_Lachapelle_2021_01_-_Chœur_et_autel.jpg" target="_blank" class="wiki-link">🔗 Voir sur Commons</a>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <span class="source-tag tag-wiki">COMMONS</span>
+                <div class="wiki-placeholder">
+                    <span class="icon">🖼️</span>
+                    <span class="text">Plafond</span>
+                </div>
+                <div class="image-info">
+                    <div class="filename">Église 2021-02 - Tableau et plafond</div>
+                    <div class="desc">Source: Wikimedia Commons</div>
+                    <a href="https://commons.wikimedia.org/wiki/File:Église_de_Lachapelle_2021_02_-_Tableau_et_plafond.jpg" target="_blank" class="wiki-link">🔗 Voir sur Commons</a>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <span class="source-tag tag-wiki">COMMONS</span>
+                <div class="wiki-placeholder">
+                    <span class="icon">🖼️</span>
+                    <span class="text">Lutrin</span>
+                </div>
+                <div class="image-info">
+                    <div class="filename">Église 2021-03 - Lutrin</div>
+                    <div class="desc">Source: Wikimedia Commons</div>
+                    <a href="https://commons.wikimedia.org/wiki/File:Église_de_Lachapelle_2021_03_-_Lutrin.jpg" target="_blank" class="wiki-link">🔗 Voir sur Commons</a>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <span class="source-tag tag-wiki">COMMONS</span>
+                <div class="wiki-placeholder">
+                    <span class="icon">🖼️</span>
+                    <span class="text">Tableau</span>
+                </div>
+                <div class="image-info">
+                    <div class="filename">Église 2021-04 - Tableau</div>
+                    <div class="desc">Source: Wikimedia Commons</div>
+                    <a href="https://commons.wikimedia.org/wiki/File:Église_de_Lachapelle_2021_04_-_Tableau.jpg" target="_blank" class="wiki-link">🔗 Voir sur Commons</a>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <span class="source-tag tag-wiki">COMMONS</span>
+                <div class="wiki-placeholder">
+                    <span class="icon">🖼️</span>
+                    <span class="text">Chaire</span>
+                </div>
+                <div class="image-info">
+                    <div class="filename">Église 2021-05 - Chaire</div>
+                    <div class="desc">Source: Wikimedia Commons</div>
+                    <a href="https://commons.wikimedia.org/wiki/File:Église_de_Lachapelle_2021_05_-_Chaire.jpg" target="_blank" class="wiki-link">🔗 Voir sur Commons</a>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <span class="source-tag tag-wiki">COMMONS</span>
+                <div class="wiki-placeholder">
+                    <span class="icon">🖼️</span>
+                    <span class="text">Escalier</span>
+                </div>
+                <div class="image-info">
+                    <div class="filename">Église 2021-06 - Escalier</div>
+                    <div class="desc">Source: Wikimedia Commons</div>
+                    <a href="https://commons.wikimedia.org/wiki/File:Église_de_Lachapelle_2021_06_-_Escalier_et_entrée.jpg" target="_blank" class="wiki-link">🔗 Voir sur Commons</a>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <span class="source-tag tag-wiki">COMMONS</span>
+                <div class="wiki-placeholder">
+                    <span class="icon">🖼️</span>
+                    <span class="text">Statues</span>
+                </div>
+                <div class="image-info">
+                    <div class="filename">Église 2021-07 - Statues</div>
+                    <div class="desc">Source: Wikimedia Commons</div>
+                    <a href="https://commons.wikimedia.org/wiki/File:Église_de_Lachapelle_2021_07_-_Statues.jpg" target="_blank" class="wiki-link">🔗 Voir sur Commons</a>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <span class="source-tag tag-wiki">COMMONS</span>
+                <div class="wiki-placeholder">
+                    <span class="icon">🖼️</span>
+                    <span class="text">Harmonium</span>
+                </div>
+                <div class="image-info">
+                    <div class="filename">Église 2021-08 - Harmonium</div>
+                    <div class="desc">Source: Wikimedia Commons</div>
+                    <a href="https://commons.wikimedia.org/wiki/File:Église_de_Lachapelle_2021_08_-_Harmonium.jpg" target="_blank" class="wiki-link">🔗 Voir sur Commons</a>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <span class="source-tag tag-wiki">COMMONS</span>
+                <div class="wiki-placeholder">
+                    <span class="icon">🖼️</span>
+                    <span class="text">Vitrail</span>
+                </div>
+                <div class="image-info">
+                    <div class="filename">Église 2021-09 - Vitrail</div>
+                    <div class="desc">Source: Wikimedia Commons</div>
+                    <a href="https://commons.wikimedia.org/wiki/File:Église_de_Lachapelle_2021_09_-_Vitrail.jpg" target="_blank" class="wiki-link">🔗 Voir sur Commons</a>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <span class="source-tag tag-wiki">COMMONS</span>
+                <div class="wiki-placeholder">
+                    <span class="icon">🖼️</span>
+                    <span class="text">Chœur</span>
+                </div>
+                <div class="image-info">
+                    <div class="filename">Église 2021-10 - Chœur</div>
+                    <div class="desc">Source: Wikimedia Commons</div>
+                    <a href="https://commons.wikimedia.org/wiki/File:Église_de_Lachapelle_2021_10_-_Chœur.jpg" target="_blank" class="wiki-link">🔗 Voir sur Commons</a>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <span class="source-tag tag-wiki">COMMONS</span>
+                <div class="wiki-placeholder">
+                    <span class="icon">🖼️</span>
+                    <span class="text">Tribune</span>
+                </div>
+                <div class="image-info">
+                    <div class="filename">Église 2021-11 - Tribune</div>
+                    <div class="desc">Source: Wikimedia Commons</div>
+                    <a href="https://commons.wikimedia.org/wiki/File:Église_de_Lachapelle_2021_11_-_Tribune.jpg" target="_blank" class="wiki-link">🔗 Voir sur Commons</a>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <span class="source-tag tag-wiki">COMMONS</span>
+                <div class="wiki-placeholder">
+                    <span class="icon">🖼️</span>
+                    <span class="text">Fonts</span>
+                </div>
+                <div class="image-info">
+                    <div class="filename">Église 2021-12 - Fonts baptismaux</div>
+                    <div class="desc">Source: Wikimedia Commons</div>
+                    <a href="https://commons.wikimedia.org/wiki/File:Église_de_Lachapelle_2021_12_-_Fonts_baptismaux.jpg" target="_blank" class="wiki-link">🔗 Voir sur Commons</a>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <span class="source-tag tag-wiki">COMMONS</span>
+                <div class="wiki-placeholder">
+                    <span class="icon">🖼️</span>
+                    <span class="text">Crèche</span>
+                </div>
+                <div class="image-info">
+                    <div class="filename">Église 2021-13 - Crèche</div>
+                    <div class="desc">Source: Wikimedia Commons</div>
+                    <a href="https://commons.wikimedia.org/wiki/File:Église_de_Lachapelle_2021_13_-_Crèche.jpg" target="_blank" class="wiki-link">🔗 Voir sur Commons</a>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <span class="source-tag tag-wiki">COMMONS</span>
+                <div class="wiki-placeholder">
+                    <span class="icon">🖼️</span>
+                    <span class="text">Tribune haut</span>
+                </div>
+                <div class="image-info">
+                    <div class="filename">Église 2021-14 - Haut tribune</div>
+                    <div class="desc">Source: Wikimedia Commons</div>
+                    <a href="https://commons.wikimedia.org/wiki/File:Église_de_Lachapelle_2021_14_-_Haut_de_la_tribune.jpg" target="_blank" class="wiki-link">🔗 Voir sur Commons</a>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <span class="source-tag tag-wiki">COMMONS</span>
+                <div class="wiki-placeholder">
+                    <span class="icon">🖼️</span>
+                    <span class="text">Portail</span>
+                </div>
+                <div class="image-info">
+                    <div class="filename">Église 2021-15 - Portail</div>
+                    <div class="desc">Source: Wikimedia Commons</div>
+                    <a href="https://commons.wikimedia.org/wiki/File:Église_de_Lachapelle_2021_15_-_Portail.jpg" target="_blank" class="wiki-link">🔗 Voir sur Commons</a>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <span class="source-tag tag-wiki">COMMONS</span>
+                <div class="wiki-placeholder">
+                    <span class="icon">🖼️</span>
+                    <span class="text">Porche</span>
+                </div>
+                <div class="image-info">
+                    <div class="filename">Église 2021-16 - Porche</div>
+                    <div class="desc">Source: Wikimedia Commons</div>
+                    <a href="https://commons.wikimedia.org/wiki/File:Église_de_Lachapelle_2021_16_-_Porche.jpg" target="_blank" class="wiki-link">🔗 Voir sur Commons</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Site Église Saint-Pierre de Lachapelle — Galerie de référence</p>
+        <a href="http://100.103.240.19:8081/index.html">← Retour au site</a>
+    </footer>
+</body>
+</html>
